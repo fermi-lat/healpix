@@ -1,0 +1,13 @@
+/** @file release.notes
+@brief healpix package relase notes
+
+  package healpix
+
+$Id: release.notes,v 1.90 2006/11/20 21:39:03 burnett Exp $
+
+@verbatim
+
+   v0 05-11-06  Initial Checkin
+@endverbatim
+
+  */
