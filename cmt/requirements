@@ -2,7 +2,7 @@ package healpix
 
 version v0
 
-#$Id$
+#$Id: requirements,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
 
 author  T. Burnett <tburnett@u.washington.edu>
 
@@ -21,6 +21,8 @@ library healpix -no_share \
  -s=../src $(source) \
  -s=base $(source) *.cc *.c
 
+# suppress warning about openmp pragma
+macro_append healpix_cppflags "" WIN32 " /wd4068"
 private
 
 application test_healpix -s=test *.cxx *.h
