@@ -3,11 +3,12 @@
 
   package healpix
 
-$Id: release.notes,v 1.90 2006/11/20 21:39:03 burnett Exp $
+$Id: release.notes,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
 
 @verbatim
 
-   v0 05-11-06  Initial Checkin
+   v0r1 THB 05-15-07  fix warnings
+   v0   MR  05-15-07  Initial Checkin
 @endverbatim
 
   */

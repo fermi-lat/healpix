@@ -1,8 +1,8 @@
 package healpix
 
-version v0
+version v0r1
 
-#$Id: requirements,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
+#$Id: requirements,v 1.2 2007/05/15 23:31:36 burnett Exp $
 
 author  T. Burnett <tburnett@u.washington.edu>
 
@@ -23,6 +23,10 @@ library healpix -no_share \
 
 # suppress warning about openmp pragma
 macro_append healpix_cppflags "" WIN32 " /wd4068"
+
 private
+
+# suppress warning C4812: obsolete declaration style:
+macro_append healpix_cppflags "" vcc-8.0 " /wd4812"
 
 application test_healpix -s=test *.cxx *.h
