@@ -1,0 +1,78 @@
+------------------------------------------------------------
+User: burnett  Tue May 15 16:22:22 PDT 2007
+healpix
+
+Log Message:
+initial checkin
+
+Status:
+
+Vendor Tag:	UW
+Release Tags:	v0
+		
+N healpix/.cvsignore
+N healpix/cmt/.cvsignore
+N healpix/cmt/NMake
+N healpix/cmt/requirements
+N healpix/doc/.cvsignore
+N healpix/doc/release.notes
+N healpix/healpix/AlmOp.h
+N healpix/healpix/Healpix.h
+N healpix/healpix/HealpixArray.h
+N healpix/healpix/HealPixel.h
+N healpix/healpix/Map.h
+N healpix/src/AlmOp.cxx
+N healpix/src/Healpix.cxx
+N healpix/src/HealPixel.cxx
+N healpix/src/mainpage.h
+N healpix/src/Map.cxx
+N healpix/src/base/alm.h
+N healpix/src/base/alm_filter_tools.cc
+N healpix/src/base/alm_filter_tools.h
+N healpix/src/base/alm_map_tools.cc
+N healpix/src/base/alm_map_tools.h
+N healpix/src/base/alm_powspec_tools.cc
+N healpix/src/base/alm_powspec_tools.h
+N healpix/src/base/arr.h
+N healpix/src/base/bluestein.c
+N healpix/src/base/bluestein.h
+N healpix/src/base/constants.h
+N healpix/src/base/cxxutils.cc
+N healpix/src/base/cxxutils.h
+N healpix/src/base/datatypes.h
+N healpix/src/base/fftpack.c
+N healpix/src/base/fftpack.h
+N healpix/src/base/fftpack_support.h
+N healpix/src/base/fitshandle.cc
+N healpix/src/base/fitshandle.h
+N healpix/src/base/fitsio.h
+N healpix/src/base/healpix_base.cc
+N healpix/src/base/healpix_base.h
+N healpix/src/base/healpix_map.cc
+N healpix/src/base/healpix_map.h
+N healpix/src/base/healpix_map_fitsio.cc
+N healpix/src/base/healpix_map_fitsio.h
+N healpix/src/base/longnam.h
+N healpix/src/base/ls_fft.c
+N healpix/src/base/ls_fft.h
+N healpix/src/base/message_error.h
+N healpix/src/base/openmp_support.h
+N healpix/src/base/planck_rng.h
+N healpix/src/base/pointing.h
+N healpix/src/base/powspec.cc
+N healpix/src/base/powspec.h
+N healpix/src/base/rotmatrix.cc
+N healpix/src/base/rotmatrix.h
+N healpix/src/base/vec3.h
+N healpix/src/base/xcomplex.h
+N healpix/src/base/ylmgen.h
+N healpix/src/test/Healpix Neighbors Nside=8.txt
+N healpix/src/test/history_test.txt
+N healpix/src/test/srctest.fits
+N healpix/src/test/TestHealpix.h
+N healpix/src/test/TestHealpixArray.h
+N healpix/src/test/test_healpix.cxx
+
+No conflicts created by this import
+
+    *
