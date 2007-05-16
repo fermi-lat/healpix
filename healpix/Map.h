@@ -3,7 +3,7 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.0 2007/05/08 21:31:18 mar0 Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
 */
 #include <string>
 #include <vector>
@@ -42,7 +42,7 @@ public:
 
 	/**@brief returns a reference to the Healpix map
 	*/
-	Healpix_Map<typename T>* map();
+        Healpix_Map< T>* map();
 
 	/**@brief applies a matched filter . The filter kernel is derived from a 
 	 fits file "LHOOD.fits"
@@ -68,7 +68,7 @@ public:
 	void writemap(std::string &out);
 
 private:
-	Healpix_Map<typename T> m_hm; //wrapped HEALpix package map object
+	Healpix_Map< T> m_hm; //wrapped HEALpix package map object
 	double m_factor;              //binning factors: E = s_minenergy*m_factor**(level-s_minlevel)
 	const static int s_minlevel = 6;
 	const static int s_minenergy = 100;
