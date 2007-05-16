@@ -3,7 +3,7 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.2 2007/05/16 22:17:22 burnett Exp $
 */
 #include <string>
 #include <vector>
@@ -11,67 +11,67 @@ $Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.1.1.1 2007/05/15
 
 namespace healpix {
 
-template<typename T> class Map {
-/**
-@class Map<T>
-@brief Encapsulates the healpix C++ class Healpix_Map, a map data array
-see "healpix_map.h" for more information on methods
+    template<typename T> class Map {
+        /**
+        @class Map<T>
+        @brief Encapsulates the healpix C++ class Healpix_Map, a map data array
+        see "healpix_map.h" for more information on methods
 
-The fits file needs to be in a healpix_map format (fits format can be generated from ROOT files with Convolution package)
+        The fits file needs to be in a healpix_map format (fits format can be generated from ROOT files with Convolution package)
 
-Usage:
-@verbatim
+        Usage:
+        @verbatim
 
-Map<double> map("map.fits",level);
-map.mfcn(lmax);  //applies a matched filter to the data
+        Map<double> map("map.fits",level);
+        map.mfcn(lmax);  //applies a matched filter to the data
 
-@endverbatim
+        @endverbatim
 
-*/	
-public:
-	/**@brief constructor takes healpix fits filename and bin level (level = 12*2**nside)
-	@param file  FITS file location   "X:\\folder\\folder\\file.fits"
-	@param level  binning level defined by energy binner from map_tools package
-	*/
-	Map<T>(const std::string &file, int level);
+        */	
+    public:
+        /**@brief constructor takes healpix fits filename and bin level (level = 12*2**nside)
+        @param file  FITS file location   "X:\\folder\\folder\\file.fits"
+        @param level  binning level defined by energy binner from map_tools package
+        */
+        Map<T>(const std::string &file, int level);
 
-	/**@brief constructor with empty map and a bin level
-	@param level  binning level defined by energy binner from photon_data package
-	*/
-	Map<T>(int level);
+        /**@brief constructor with empty map and a bin level
+        @param level  binning level defined by energy binner from photon_data package
+        */
+        Map<T>(int level);
 
-	/**@brief returns a reference to the Healpix map
-	*/
+        /**@brief returns a reference to the Healpix map
+        */
         Healpix_Map< T>* map();
 
-	/**@brief applies a matched filter . The filter kernel is derived from a 
-	 fits file "LHOOD.fits"
-	@param psffile  FITS file location   "X:\\folder\\folder\\file.fits"
-	@param lmax  maximum multipole moment
-	*/
-	void mfcn(const std::string &psffile,int lmax);
+        /**@brief applies a matched filter . The filter kernel is derived from a 
+        fits file "LHOOD.fits"
+        @param psffile  FITS file location   "X:\\folder\\folder\\file.fits"
+        @param lmax  maximum multipole moment
+        */
+        void mfcn(const std::string &psffile,int lmax);
 
-	/**@brief applies a matched filter with assumed shape of photon likelihood
-	@param lmax  maximum multipole moment
-	*/
-	void mfcn(int lmax);
+        /**@brief applies a matched filter with assumed shape of photon likelihood
+        @param lmax  maximum multipole moment
+        */
+        void mfcn(int lmax);
 
-	/**@brief applies a matched filter with a varied background
-	@param noise  file of noise
-	@param lmax  maximum multipole moment
-	*/
-	void mfvn(const std::string &noise, int lmax);
+        /**@brief applies a matched filter with a varied background
+        @param noise  file of noise
+        @param lmax  maximum multipole moment
+        */
+        void mfvn(const std::string &noise, int lmax);
 
-	/**@brief writes a FITS file out in the HEALpix convention
-	@param out  FITS file location   "X:\\folder\\folder\\file.fits"
-	*/
-	void writemap(std::string &out);
+        /**@brief writes a FITS file out in the HEALpix convention
+        @param out  FITS file location   "X:\\folder\\folder\\file.fits"
+        */
+        void writemap(std::string &out);
 
-private:
-	Healpix_Map< T> m_hm; //wrapped HEALpix package map object
-	double m_factor;              //binning factors: E = s_minenergy*m_factor**(level-s_minlevel)
-	const static int s_minlevel = 6;
-	const static int s_minenergy = 100;
-};
+    private:
+        Healpix_Map< T> m_hm; //wrapped HEALpix package map object
+        double m_factor;              //binning factors: E = s_minenergy*m_factor**(level-s_minlevel)
+        const static int s_minlevel = 6;
+        const static int s_minenergy = 100;
+    };
 
 } //namespace
