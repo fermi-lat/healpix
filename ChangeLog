@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed May 16 15:17:22 PDT 2007
+healpix/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+forlinux
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r1, operation: add
 Package: healpix
