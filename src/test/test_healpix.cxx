@@ -3,12 +3,12 @@
 
 @author M. Roth, T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/test/test_healpix.cxx,v 1.0 2007/05/16 23:57:57 mar0 Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/test/test_healpix.cxx,v 1.3 2007/05/30 19:11:28 mar0 Exp $
 */
 
 #include "healpix/Map.h"
 #include "src/base/message_error.h"
-#include "healpix/Healpixel.h"
+#include "healpix/HealPixel.h"
 #include "TestHealpix.h"
 #include "TestHealpixArray.h"
 #include <iostream>
