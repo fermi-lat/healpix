@@ -3,9 +3,10 @@
 
   package healpix
 
-$Id: release.notes,v 1.3 2007/05/16 22:17:22 burnett Exp $
+$Id: release.notes,v 1.4 2007/05/30 19:15:31 mar0 Exp $
 
 @verbatim
+   v0r1p4 MR  05-30-07  fixed capitalization
    v0r1p3 MR  05-30-07  fixed eof, initialization errors
    v0r1p1 THB 05-16-07  fix warnings, linux errors
    v0     MR  05-15-07  Initial Checkin
