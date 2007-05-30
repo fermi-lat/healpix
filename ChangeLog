@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: mar0  Wed May 30 12:11:28 PDT 2007
+healpix/src
+
+Modified Files:
+	AlmOp.cxx Map.cxx 
+Log Message:
+fixed uninitialized variable error, eof error, path error
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r1p3, operation: add
 Package: healpix
