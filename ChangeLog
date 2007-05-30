@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: mar0  Wed May 30 12:22:49 PDT 2007
+healpix/src/test
+
+Modified Files:
+	test_healpix.cxx 
+Log Message:
+fixed capitalization
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r1p3, operation: add
 Package: healpix
