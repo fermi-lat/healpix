@@ -1,3 +1,11 @@
+/** @file AlmOp.cxx
+@brief Wrapper for the JPL healpix class of spherical harmonics, with the addition of operators required for filtering
+
+@author M. Roth 
+
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/AlmOp.cxx,v 1.0 2007/05/16 23:57:57 mar0 Exp $
+*/
+
 #include "healpix/AlmOp.h"
 #include "base/xcomplex.h"
 #include "base/alm.h"
