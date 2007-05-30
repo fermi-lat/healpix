@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: mar0  Wed May 30 12:11:28 PDT 2007
+healpix/src/test
+
+Modified Files:
+	test_healpix.cxx 
+Log Message:
+fixed uninitialized variable error, eof error, path error
+    *
+------------------------------------------------------------
+User: mar0  Wed May 30 12:11:28 PDT 2007
 healpix/src
 
 Modified Files:
