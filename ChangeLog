@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: mar0  Mon Nov 19 15:05:10 PST 2007
+healpix/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+added const map reference
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r1p8, operation: add
 Package: healpix
