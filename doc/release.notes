@@ -3,9 +3,10 @@
 
   package healpix
 
-$Id: release.notes,v 1.8 2007/06/04 22:14:25 mar0 Exp $
+$Id: release.notes,v 1.9 2007/06/04 23:50:19 mar0 Exp $
 
 @verbatim
+   v0r1p9 MR  11-19-07  added const reference to Map
    v0r1p8 MR  06-04-07  fixed pragma warnings
    v0r1p7 MR  06-04-07  fixed pragma and constructor warnings
    v0r1p6 MR  06-04-07  fixed warnings about #pragma

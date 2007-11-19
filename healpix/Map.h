@@ -3,11 +3,12 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.3 2007/05/16 23:57:57 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.4 2007/06/04 22:14:25 mar0 Exp $
 */
 #include <string>
 #include <vector>
-#include "../src/base/healpix_map.h"
+#include "src/base/healpix_map.h"
+
 
 namespace healpix {
 
@@ -43,6 +44,8 @@ namespace healpix {
         /**@brief returns a reference to the Healpix map
         */
         Healpix_Map< T>* map();
+
+        Healpix_Map< T> cmap() const { return m_hm;}
 
         /**@brief applies a matched filter . The filter kernel is derived from a 
         fits file "LHOOD.fits"
