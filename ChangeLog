@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Nov 20 15:13:49 PST 2007
+healpix/healpix
+
+Modified Files:
+	HealPixel.h 
+Log Message:
+needed default ctor for SWIG
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r1p9, operation: add
 Package: healpix
