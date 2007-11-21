@@ -3,7 +3,7 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.4 2007/06/04 22:14:25 mar0 Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.5 2007/11/19 23:05:10 mar0 Exp $
 */
 #include <string>
 #include <vector>
@@ -73,8 +73,8 @@ namespace healpix {
     private:
         double m_factor;              //binning factors: E = s_minenergy*m_factor**(level-s_minlevel)
 		Healpix_Map< T> m_hm; //wrapped HEALpix package map object
-        const static int s_minlevel = 6;
-        const static int s_minenergy = 100;
+        static const int s_minlevel = 6;
+        static const int s_minenergy = 100;
     };
 
 } //namespace
