@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Nov 21 08:44:35 PST 2007
+healpix/healpix
+
+Modified Files:
+	Map.h 
+Log Message:
+fix linux warning
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r1p10, operation: add
 Package: healpix
