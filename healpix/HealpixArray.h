@@ -3,13 +3,13 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/astro/astro/HealpixArray.h,v 1.8 2006/04/14 19:23:51 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/HealpixArray.h,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
 */
 
 #ifndef healpix_HealpixArray_h
 #define healpix_HealpixArray_h
 
-#include "astro/Healpix.h"
+#include "healpix/Healpix.h"
 
 #include <vector>
 
@@ -50,28 +50,28 @@ public:
 
 
     //! return the pixel associated with an iterator
-    astro::Healpix::Pixel pixel(typename std::vector<C>::const_iterator it)const{
-        astro::Healpix::Pixel px(it-this->begin(), m_hp);
+    healpix::Healpix::Pixel pixel(typename std::vector<C>::const_iterator it)const{
+        healpix::Healpix::Pixel px(it-this->begin(), m_hp);
         return px;
     }
 
     //! @brief access a content object by direction, for modificaion
     C& operator[](const astro::SkyDir& dir){
-        astro::Healpix::Pixel pix = m_hp.pixel(dir);
+        healpix::Healpix::Pixel pix = m_hp.pixel(dir);
         return at(pix.index());
     }
 
     //! brief access a content object in read-only mode
     const C& operator[](const astro::SkyDir& dir)const{
-        astro::Healpix::Pixel pix = m_hp.pixel(dir);
+        healpix::Healpix::Pixel pix = m_hp.pixel(dir);
         return at(pix.index());
     }
     //! access the Healpix configuration object
     Healpix healpix()const{return m_hp;}
-    void setHealpix(astro::Healpix hp){m_hp=hp; resize(hp.size());}
+    void setHealpix(healpix::Healpix hp){m_hp=hp; resize(hp.size());}
 
 private:
-    astro::Healpix m_hp;
+    healpix::Healpix m_hp;
 };
 
 } // namespace healpix
