@@ -1,6 +1,6 @@
 /** @file HealpixMap.cxx
     @brief implement HealpixMap
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/HealpixMap.cxx,v 1.1 2007/11/27 03:40:36 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/HealpixMap.cxx,v 1.2 2007/11/27 03:56:47 burnett Exp $
 */
 
 #include "healpix/HealpixMap.h"
@@ -9,7 +9,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/healpix/src/HealpixMap.cxx,v 1.1 2007/11/2
 using namespace healpix;
 
 HealpixMap::HealpixMap(int level)
-: m_level(level)
+:  m_level(level)
 {}
 
 HealpixMap::~HealpixMap()
