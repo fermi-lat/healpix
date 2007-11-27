@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Nov 26 19:40:36 PST 2007
+healpix/healpix
+
+Added Files:
+	HealpixMap.h 
+Log Message:
+new class to represent a map of pixels
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r2p1, operation: add
 Package: healpix
