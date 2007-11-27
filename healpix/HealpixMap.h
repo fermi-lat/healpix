@@ -3,7 +3,7 @@
 
 @author T. Burnett <tburnett@u.washington.edu>
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/HealpixMap.h,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/HealpixMap.h,v 1.1 2007/11/27 03:40:36 burnett Exp $
 */
 
 #ifndef healpix_HealpixMap_h
@@ -21,10 +21,10 @@ namespace healpix{
         Note that since it is a map of float, one can set and acess pixels with the [] operator.
         */
 
-    class HealpixMap :public astro::SkyFunction , std::map<int, float> {
+    class HealpixMap :public astro::SkyFunction , public std::map<int, float> {
     public:
         HealpixMap(int level = 8);
-        ~HealpixMap(){}
+        ~HealpixMap();
 
         //! @brief  coordinates of a point in the sky
         //! @return value at that point
