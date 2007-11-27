@@ -1,6 +1,6 @@
 /** @file HealpixMap.cxx
     @brief implement HealpixMap
-$Header: /nfs/slac/g/glast/ground/cvs/pointlike/src/HealpixMap.cxx,v 1.3 2007/11/23 01:35:44 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/HealpixMap.cxx,v 1.1 2007/11/27 03:40:36 burnett Exp $
 */
 
 #include "healpix/HealpixMap.h"
@@ -8,6 +8,12 @@ $Header: /nfs/slac/g/glast/ground/cvs/pointlike/src/HealpixMap.cxx,v 1.3 2007/11
 #include <fstream>
 using namespace healpix;
 
+HealpixMap::HealpixMap(int level)
+: m_level(level)
+{}
+
+HealpixMap::~HealpixMap()
+{}
 
 void HealpixMap::save(std::string filename)
 {
