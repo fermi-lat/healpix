@@ -1,33 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Thu Nov 22 17:30:27 PST 2007
-healpix/src
-
-Added Files:
-	CosineBinner.cxx HealpixArrayIO.cxx 
-Log Message:
-add CosineBinner and HealpixArrayIO
-    *
-------------------------------------------------------------
-User: burnett  Thu Nov 22 17:30:27 PST 2007
-healpix/healpix
-
-Modified Files:
-	HealpixArray.h 
-Added Files:
-	CosineBinner.h HealpixArrayIO.h 
-Log Message:
-add CosineBinner and HealpixArrayIO
-    *
-------------------------------------------------------------
-User: burnett  Wed Nov 21 08:44:35 PST 2007
-healpix/healpix
-
-Modified Files:
-	Map.h 
-Log Message:
-fix linux warning
-    *
-------------------------------------------------------------
 TAG
 Tag name: v0r1p10, operation: add
 Package: healpix
