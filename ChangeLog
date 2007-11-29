@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Nov 28 19:49:35 PST 2007
+healpix/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+tagging after swig conversion
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r3p1, operation: add
 Package: healpix
