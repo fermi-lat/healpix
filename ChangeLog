@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: mar0  Wed Dec  5 12:52:43 PST 2007
+healpix/healpix
+
+Modified Files:
+	Map.h 
+Log Message:
+Added SkyFunction implementation
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r0, operation: add
 Package: healpix
