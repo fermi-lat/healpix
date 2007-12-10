@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Dec  9 18:02:52 PST 2007
+healpix/healpix
+
+Modified Files:
+	Healpix.h 
+Log Message:
+fixes for move from astro
+    *
+------------------------------------------------------------
 User: mar0  Wed Dec  5 12:52:43 PST 2007
 healpix/healpix
 
