@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sun Dec  9 18:02:52 PST 2007
+healpix/src/test
+
+Modified Files:
+	TestHealpix.h TestHealpixArray.h 
+Log Message:
+fixes for move from astro
+    *
+------------------------------------------------------------
+User: burnett  Sun Dec  9 18:02:52 PST 2007
 healpix/healpix
 
 Modified Files:
