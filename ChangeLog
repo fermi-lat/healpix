@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Dec 10 21:04:58 PST 2007
+healpix/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+made swig compatible
+    *
+------------------------------------------------------------
 User: burnett  Mon Dec 10 19:26:29 PST 2007
 healpix/src
 
