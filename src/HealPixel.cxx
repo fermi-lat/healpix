@@ -1,7 +1,7 @@
 /** @file HealPixel.cxx
 @brief Implement the HealPixel class
 
-$Header: /nfs/slac/g/glast/ground/cvs/astro/src/HealPixel.cxx,v 1.7 2006/04/20 21:58:20 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/HealPixel.cxx,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
 */
 
 #include "healpix/HealPixel.h" 
@@ -11,7 +11,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/astro/src/HealPixel.cxx,v 1.7 2006/04/20 2
 using namespace healpix;
 
 
-astro::SkyDir::CoordSystem HealPixel::s_coordsys = astro::SkyDir::GALACTIC;
+astro::SkyDir::CoordSystem healpix::HealPixel::s_coordsys = astro::SkyDir::GALACTIC;
 
 HealPixel::HealPixel(long index, int level)
 : m_index(index)
@@ -103,6 +103,10 @@ std::vector<HealPixel> HealPixel::neighbors() const
     return p;
 }
 
+void HealPixel::setCoordinateSystem(astro::SkyDir::CoordSystem sys)
+{
+            s_coordsys=sys;
+}
 
 bool HealPixel::test()
 { 

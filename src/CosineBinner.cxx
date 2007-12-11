@@ -3,7 +3,7 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/CosineBinner.cxx,v 1.2 2006/04/15 15:12:55 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/CosineBinner.cxx,v 1.1 2007/11/23 01:30:27 burnett Exp $
 */
 
 
@@ -60,3 +60,10 @@ std::string CosineBinner::thetaBinning(){
     }
 }
 
+void CosineBinner::setBinning(double cosmin, size_t nbins, bool sqrt_weight)
+{
+        s_cosmin=cosmin, s_nbins=nbins, s_sqrt_weight=sqrt_weight;
+}
+
+double CosineBinner::cosmin() { return s_cosmin;}
+size_t CosineBinner::nbins() {return s_nbins;}
