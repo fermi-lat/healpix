@@ -2,6 +2,14 @@
 TAG
 Tag name: v1r1, operation: add
 Package: healpix
+User: burnett  Mon Dec 10 21:08:59 2007
+Files:
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: v1r1, operation: add
+Package: healpix
 User: burnett  Mon Dec 10 21:06:07 2007
 Files:
   healpix/.cvsignore  1.2
