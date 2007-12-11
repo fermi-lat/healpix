@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Dec 10 19:26:29 PST 2007
+healpix/healpix
+
+Modified Files:
+	CosineBinner.h HealPixel.h 
+Log Message:
+updates for compatiblity with SWIG
+    *
+------------------------------------------------------------
 User: burnett  Sun Dec  9 18:02:52 PST 2007
 healpix/src/test
 
