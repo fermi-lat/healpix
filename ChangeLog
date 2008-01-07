@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: mar0  Mon Jan  7 12:00:43 PST 2008
+healpix/healpix
+
+Modified Files:
+	Map.h 
+Log Message:
+added methods for addition, scaling, and power spectrum to Map class
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r1, operation: add
 Package: healpix
