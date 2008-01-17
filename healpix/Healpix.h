@@ -3,7 +3,7 @@
 
 @author B. Lesnick (based on information from http://www.eso.org/science/healpix/) 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Healpix.h,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Healpix.h,v 1.2 2007/12/10 02:02:52 burnett Exp $
 */
 
 #ifndef healpix_Healpix_h
@@ -59,7 +59,7 @@ public:
 
     */
     Healpix(long nside=2, Ordering ord = NESTED, 
-        astro::SkyDir::CoordSystem coordsys = astro::SkyDir::GALACTIC);
+        astro::SkyDir::CoordSystem coordsys = astro::SkyDir::EQUATORIAL);
 
     ///@brief the number of sides 
     long nside()const;
