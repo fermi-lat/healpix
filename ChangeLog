@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: burnett  Wed Jan 16 20:06:04 PST 2008
+healpix/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+switch default coord system to celestial.
+will tag, but proper use of FITS templates is coming.
+    *
+------------------------------------------------------------
+User: burnett  Wed Jan 16 20:06:04 PST 2008
 healpix/cmt
 
 Modified Files:
