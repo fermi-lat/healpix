@@ -3,7 +3,7 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.7 2007/12/05 20:52:43 mar0 Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.8 2008/01/07 20:00:43 mar0 Exp $
 */
 #include <string>
 #include <vector>
@@ -11,7 +11,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.7 2007/12/05 20:
 #include "src/base/powspec.h"
 #include "astro/SkyFunction.h"
 
-
+#include "healpix/HealPixel.h"
 
 namespace healpix {
 
