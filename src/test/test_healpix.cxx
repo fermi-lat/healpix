@@ -3,7 +3,7 @@
 
 @author M. Roth, T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/test/test_healpix.cxx,v 1.3 2007/05/30 19:11:28 mar0 Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/test/test_healpix.cxx,v 1.4 2007/05/30 19:22:49 mar0 Exp $
 */
 
 #include "healpix/Map.h"
@@ -33,7 +33,7 @@ int main() {
             Map<double> mp(string("../src/test/srctest.fits"),i);
             cout << "done!" << endl;
             cout << "Filtering map...";
-            mp.mfcn(155*(2*(i-5)));
+            mp.mfcn(155*(2*(i-5)),100*pow(2.35,(i-6)*1.));
             cout << "done!" << endl;
             //cout << "Writing output fits file...";
             //if the output file already exists, then the program will throw an error
