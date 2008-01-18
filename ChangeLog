@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: mar0  Fri Jan 18 15:46:52 PST 2008
+healpix/healpix
+
+Modified Files:
+	Map.h 
+Log Message:
+Added OpenMP support to the Map class, along with routines to extract the angular power spectrum
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1r1p2, operation: add
 Package: healpix
