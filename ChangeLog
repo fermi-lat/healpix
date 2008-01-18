@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: mar0  Fri Jan 18 15:46:52 PST 2008
+healpix/src
+
+Modified Files:
+	Map.cxx 
+Log Message:
+Added OpenMP support to the Map class, along with routines to extract the angular power spectrum
+    *
+------------------------------------------------------------
+User: mar0  Fri Jan 18 15:46:52 PST 2008
 healpix/healpix
 
 Modified Files:
