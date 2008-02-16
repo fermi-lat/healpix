@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Fri Feb 15 18:37:35 PST 2008
+healpix
+
+Added Files:
+	SConscript healpixLib.py 
+Log Message:
+SCons files for healpix
+    *
+------------------------------------------------------------
 User: mar0  Fri Jan 18 15:46:52 PST 2008
 healpix/src/test
 
