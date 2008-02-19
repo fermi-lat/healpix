@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Tue Feb 19 15:10:12 PST 2008
-healpix/src
-
-Modified Files:
-	HealpixArrayIO.cxx 
-Log Message:
-handle header info
-    *
-------------------------------------------------------------
 TAG
 Tag name: v1r1p3, operation: add
 Package: healpix
