@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Wed Feb 20 09:07:39 PST 2008
+healpix
+
+Modified Files:
+	SConscript healpixLib.py 
+Log Message:
+Fixed bug in the way healpix library was added to linking. Cosmetic changes
+    *
+------------------------------------------------------------
 TAG
 Tag name: healpix-01-02-01, operation: add
 Package: healpix
