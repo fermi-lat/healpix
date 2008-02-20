@@ -1,5 +1,4 @@
-#$Id$
-import glob,os
+#$Id: SConscript,v 1.1 2008/02/16 02:37:35 golpa Exp $
 
 Import('baseEnv')
 Import('listFiles')
