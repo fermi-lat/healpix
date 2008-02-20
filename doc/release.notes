@@ -3,10 +3,10 @@
 
   package healpix
 
-$Id: release.notes,v 1.19 2008/01/18 20:43:44 jchiang Exp $
+$Id: release.notes,v 1.20 2008/02/19 23:12:03 burnett Exp $
 
 @verbatim
-   v1r2   THB 19-feb-08 manage header info properly
+   v1r2p1 THB 19-feb-08 manage header info properly
    v1r1p2  JC 18-jan-08 added include for linux build in Map.h
    v1r1p1 THB 16-jan-08 Switch default coord system to equatorial
    v1r1   THB 12-10-07  Remove swiq from req file, but improve swig compatibility
