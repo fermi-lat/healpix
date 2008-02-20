@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Feb 19 18:18:43 PST 2008
+healpix/healpix
+
+Modified Files:
+	Map.h 
+Log Message:
+include needed for gcc
+    *
+------------------------------------------------------------
 TAG
 Tag name: healpix-01-02-00, operation: add
 Package: healpix
