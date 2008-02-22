@@ -1,4 +1,4 @@
-#$Id: SConscript,v 1.2 2008/02/20 17:07:39 golpa Exp $
+#$Id: SConscript,v 1.3 2008/02/20 19:18:41 burnett Exp $
 
 Import('baseEnv')
 Import('listFiles')
@@ -17,6 +17,6 @@ test_healpix = progEnv.Program('test_healpix', listFiles(['src/test/*.cxx']))
 
 progEnv.Tool('registerObjects', 
               package = 'healpix', 
-              libraries = [healpixSharedLib], 
+              libraries = [healpixSharedLib],
+              testApps = [test_healpix],
 	      includes = listFiles(['healpix/*.h']))
-
