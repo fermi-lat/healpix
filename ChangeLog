@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 TAG
+Tag name: healpix-01-02-00, operation: mov
+Package: healpix
+User: glast  Fri Feb 22 13:29:19 2008
+Files:
+  healpix/SConscript  1.4
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: v1r2p0, operation: mov
 Package: healpix
 User: glast  Fri Feb 22 13:29:08 2008
