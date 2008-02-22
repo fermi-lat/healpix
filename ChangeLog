@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Fri Feb 22 13:28:31 PST 2008
+healpix
+
+Modified Files:
+	SConscript 
+Log Message:
+test app is now registered
+    *
+------------------------------------------------------------
 TAG
 Tag name: healpix-01-02-00, operation: add
 Package: healpix
