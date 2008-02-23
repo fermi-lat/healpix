@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Feb 22 16:29:19 PST 2008
+healpix
+
+Modified Files:
+	SConscript 
+Log Message:
+clean up
+    *
+------------------------------------------------------------
 TAG
 Tag name: healpix-01-02-00, operation: mov
 Package: healpix
