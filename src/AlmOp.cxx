@@ -3,7 +3,7 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/AlmOp.cxx,v 1.2 2007/05/30 19:11:28 mar0 Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/AlmOp.cxx,v 1.3 2008/01/07 20:00:43 mar0 Exp $
 */
 
 #include "healpix/AlmOp.h"
@@ -13,17 +13,17 @@ $Header: /nfs/slac/g/glast/ground/cvs/healpix/src/AlmOp.cxx,v 1.2 2007/05/30 19:
 
 using namespace healpix;
 
-template<typename T> AlmOp<T>::AlmOp<T>() :m_alm(0,0) {
+template<typename T> healpix::AlmOp<T>::AlmOp() :m_alm(0,0) {
 }
 
-template AlmOp<xcomplex<float> >::AlmOp<xcomplex<float> >();
-template AlmOp<xcomplex<double> >::AlmOp<xcomplex<double> >();
+template AlmOp<xcomplex<float> >::AlmOp();
+template AlmOp<xcomplex<double> >::AlmOp();
 
 
-template<typename T> AlmOp<T>::AlmOp<T>(int lmax, int mmax):m_alm(lmax,mmax) {
+template<typename T> healpix::AlmOp<T>::AlmOp(int lmax, int mmax):m_alm(lmax,mmax) {
 }
-template AlmOp<xcomplex<float> >::AlmOp<xcomplex<float> >(int lmax, int mmax);
-template AlmOp<xcomplex<double> >::AlmOp<xcomplex<double> >(int lmax, int mmax);
+template AlmOp<xcomplex<float> >::AlmOp(int lmax, int mmax);
+template AlmOp<xcomplex<double> >::AlmOp(int lmax, int mmax);
 
 
 template<typename T> Alm<T>* AlmOp<T>::Alms() {
