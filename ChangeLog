@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glast  Tue Feb 26 11:36:27 PST 2008
+healpix
+
+Modified Files:
+	SConscript 
+Log Message:
+Small typo
+    *
+------------------------------------------------------------
 TAG
 Tag name: healpix-01-02-00, operation: mov
 Package: healpix
