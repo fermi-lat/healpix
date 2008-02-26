@@ -1,21 +1,19 @@
-#$Id$
-import glob,os
+# @file SConscript
+# @brief build info for package healpix
+#
+#$Header: /nfs/slac/g/glast/ground/cvs/healpix/SConscript,v 1.6 2008/02/26 03:27:53 glastrm Exp $
 
 Import('baseEnv')
 Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
-if libEnv['PLATFORM'] == "win32":
-	libEnv.AppendUnique(CPPFLAGS = "/wd4068")
-	if libEnv['MSVS_VERSION'] == "8.0":
-		libEnv.AppendUnique(CPPFLAGS = "/wd4812")
-
-healpixSharedLib = libEnv.SharedLibrary('healpix', listFiles(['src/*.cxx', 'src/base/*.cc', 'src/base/*.c']))
-healpixStaticLib = libEnv.StaticLibrary('healpix', listFiles(['src/*.cxx', 'src/base/*.cc', 'src/base/*.c']))
-
-progEnv.Tool('healpixLib')
-test_healpix = progEnv.Program('test_healpix', listFiles(['src/test/*.cxx']))
-
-progEnv.Tool('registerObjects', package = 'healpix', libraries = [healpixSharedLib, healpixStaticLib], includes = listFiles(['healpix/*.h']))
-
+libEnv.Tool('healpixLib', depsOnly = 1)
+progEnv.Tool('registerObjects', 
+      package = 'healpix', 
+      includes = listFiles(['healpix/*.h']),
+      libraries = [libEnv.SharedLibrary('healpix', 
+                    listFiles(['src/*.cxx', 'src/base/*.cc', 'src/base/*.c']))],
+      testApps = [progEnv.Program('test_healpix', listFiles(['src/test/*.cxx']))],
+      )
+	      
