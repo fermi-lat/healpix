@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Mon Feb 25 19:27:53 PST 2008
+ScienceTools-scons/healpix
+
+Modified Files:
+	healpixLib.py SConscript 
+Log Message:
+Set lib dependencies up for when building libraries
+    *
+------------------------------------------------------------
 User: burnett  Sun Feb 24 10:23:11 PST 2008
 healpix/src
 
