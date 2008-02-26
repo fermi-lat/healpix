@@ -1,6 +1,7 @@
-#$Id: healpixLib.py,v 1.1 2008/02/16 02:37:35 golpa Exp $
+#$Id: healpixLib.py,v 1.2 2008/02/20 17:07:39 golpa Exp $
 def generate(env, **kw):
-    env.Tool('addLibrary', library = ['healpix'])
+    if not kw.get('depsOnly',0):
+        env.Tool('addLibrary', library = ['healpix'])
     env.Tool('astroLib')
     
 def exists(env):
