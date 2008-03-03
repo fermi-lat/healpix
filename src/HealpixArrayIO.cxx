@@ -3,7 +3,7 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/HealpixArrayIO.cxx,v 1.2 2007/12/11 03:26:29 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/HealpixArrayIO.cxx,v 1.3 2008/02/19 23:10:12 burnett Exp $
 */
 
 #include "healpix/HealpixArrayIO.h"
@@ -26,11 +26,21 @@ namespace {
     {
         const Healpix& hp = ha.healpix();
         hdr["ORDERING"].set(hp.ord() == Healpix::NEST? "NESTED": "RING"); 
-        hdr["COORDTYPE"].set(hp.galactic()? "GAL" : "EQU");
+        hdr["COORDSYS"].set(hp.galactic()? "GAL" : "EQU");
         hdr["NSIDE"].set(hp.nside()); 
         hdr["FIRSTPIX"].set(0); 
         hdr["LASTPIX"].set(ha.size()-1); 
         hdr["NAXIS1"].set( columns* sizeof(float) );
+    }
+    std::string coordsystem(const tip::Header& hdr){
+        std::string value;
+        try{ // new value
+            hdr["COORDSYS"].get(value);
+        }catch(const std::exception &){
+            // allow old value
+            hdr["COORDTYPE"].get(value);
+        }
+        return value;
     }
 
 
@@ -224,8 +234,8 @@ HealpixArray<CosineBinner> HealpixArrayIO::read(const std::string & inputFile,
     hdr["COSMIN"].get(cosmin);
 
     // Code for setting CoordSystem added 1/17/2008
-    std::string check;
-    hdr["COORDTYPE"].get(check);
+    std::string check(coordsystem(hdr));
+
     astro::SkyDir::CoordSystem coordsys = (check == "GAL")?
         astro::SkyDir::GALACTIC: astro::SkyDir::EQUATORIAL;
 
@@ -263,8 +273,7 @@ HealpixArray<float> HealpixArrayIO::read(const std::string & inputFile,
         Healpix::NEST: Healpix::RING;
 
     // Code for setting CoordSystem added 1/17/2008
-    std::string check;
-    hdr["COORDTYPE"].get(check);
+    std::string check( coordsystem(hdr));
     astro::SkyDir::CoordSystem coordsys = (check == "GAL")?
         astro::SkyDir::GALACTIC: astro::SkyDir::EQUATORIAL;
 
@@ -295,8 +304,7 @@ HealpixArray<std::vector<float> > HealpixArrayIO::read(const std::string & input
         Healpix::NEST: Healpix::RING;
 
     // Code for setting CoordSystem added 1/17/2008
-    std::string check;
-    hdr["COORDTYPE"].get(check);
+    std::string check( coordsystem(hdr));
     astro::SkyDir::CoordSystem coordsys = (check == "GAL")?
         astro::SkyDir::GALACTIC: astro::SkyDir::EQUATORIAL;
 
