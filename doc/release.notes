@@ -3,9 +3,10 @@
 
   package healpix
 
-$Id: release.notes,v 1.20 2008/02/19 23:12:03 burnett Exp $
+$Id: release.notes,v 1.21 2008/02/20 02:20:18 burnett Exp $
 
 @verbatim
+   v1r3   THB switch FITS coordinate system keyword to COORDSYS
    v1r2p1 THB 19-feb-08 manage header info properly
    v1r1p2  JC 18-jan-08 added include for linux build in Map.h
    v1r1p1 THB 16-jan-08 Switch default coord system to equatorial
