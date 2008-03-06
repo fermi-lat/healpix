@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Thu Mar  6 11:50:49 PST 2008
+ScienceTools-scons/healpix
+
+Modified Files:
+	SConscript 
+Log Message:
+Add private header files to public dir for now as a workaround
+    *
+------------------------------------------------------------
 TAG
 Tag name: healpix-01-03-00, operation: add
 Package: healpix
