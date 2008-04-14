@@ -1,22 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Mon Apr 14 13:05:22 PDT 2008
-healpix/src
-
-Modified Files:
-	HealPixel.cxx 
-Log Message:
-expand capability with "band" info
-    *
-------------------------------------------------------------
-User: burnett  Mon Apr 14 13:05:22 PDT 2008
-healpix/healpix
-
-Modified Files:
-	HealPixel.h 
-Log Message:
-expand capability with "band" info
-    *
-------------------------------------------------------------
 TAG
 Tag name: healpix-01-03-00, operation: mov
 Package: healpix
