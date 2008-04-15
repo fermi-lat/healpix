@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Tue Apr 15 14:05:52 PDT 2008
+healpix/src
+
+Modified Files:
+	HealPixel.cxx 
+Log Message:
+tagging after switch to new cfitsio
+    *
+------------------------------------------------------------
+User: burnett  Tue Apr 15 14:05:52 PDT 2008
 healpix/doc
 
 Modified Files:
