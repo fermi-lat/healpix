@@ -1,7 +1,7 @@
 /** @file HealPixel.cxx
 @brief Implement the HealPixel class
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/HealPixel.cxx,v 1.2 2007/12/11 03:26:29 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/HealPixel.cxx,v 1.3 2008/04/14 20:05:22 burnett Exp $
 */
 
 #include "healpix/HealPixel.h" 
@@ -123,7 +123,7 @@ std::vector<HealPixel> HealPixel::neighbors() const
     for (std::vector<long>::const_iterator i = neighbors.begin();
         i !=neighbors.end(); ++i)
     {
-        p.push_back( HealPixel(*i, data()));
+        p.push_back( HealPixel(*i, level(), band()));
     }
     return p;
 }
