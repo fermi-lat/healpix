@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Apr 15 14:05:52 PDT 2008
+healpix/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+tagging after switch to new cfitsio
+    *
+------------------------------------------------------------
 TAG
 Tag name: v2r0, operation: add
 Package: healpix
