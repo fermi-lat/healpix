@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Apr 15 18:32:35 PDT 2008
+healpix/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+ultimate protection against change of cfitsio; don't maintain a local copy of fitsio.h
+    *
+------------------------------------------------------------
 TAG
 Tag name: healpix-02-00-00, operation: add
 Package: healpix
