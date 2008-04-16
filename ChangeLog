@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: burnett  Tue Apr 15 18:32:35 PDT 2008
+healpix/src/base
+
+Removed Files:
+      Tag: v2r0
+	fitsio.h 
+Log Message:
+ultimate protection against change of cfitsio; don't maintain a local copy of fitsio.h
+    *
+------------------------------------------------------------
+User: burnett  Tue Apr 15 18:32:35 PDT 2008
 healpix/doc
 
 Modified Files:
