@@ -3,10 +3,10 @@
 
   package healpix
 
-$Id: release.notes,v 1.23 2008/04/14 20:51:12 burnett Exp $
+$Id: release.notes,v 1.24 2008/04/15 21:05:52 burnett Exp $
 
 @verbatim
-   v2r0   THB 15-apr-08 Switch to explicit dependence (via wired-in define in healpix) on cfisio 3.060
+   v2r0p1 THB 15-apr-08 Remove explicit fitsio.h downloaded from WMAP
    v1r4   THB 14-apr-08 enhance HealPixel to encode an energy band identifier
    v1r3   THB           switch FITS coordinate system keyword to COORDSYS
    v1r2p1 THB 19-feb-08 manage header info properly
