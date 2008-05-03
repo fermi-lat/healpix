@@ -3,9 +3,10 @@
 
   package healpix
 
-$Id: release.notes,v 1.24 2008/04/15 21:05:52 burnett Exp $
+$Id: release.notes,v 1.25 2008/04/16 01:32:35 burnett Exp $
 
 @verbatim
+   v2r1   THB 03-may-08 Remove neighbor restriction to NESTED; use int instead of long for returned array
    v2r0p1 THB 15-apr-08 Remove explicit fitsio.h downloaded from WMAP
    v1r4   THB 14-apr-08 enhance HealPixel to encode an energy band identifier
    v1r3   THB           switch FITS coordinate system keyword to COORDSYS
