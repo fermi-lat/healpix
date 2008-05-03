@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat May  3 12:39:56 PDT 2008
+healpix/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+see release.notes; tagging
+    *
+------------------------------------------------------------
 TAG
 Tag name: healpix-02-00-01, operation: add
 Package: healpix
