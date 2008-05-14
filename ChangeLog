@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue May 13 18:29:31 PDT 2008
+healpix/healpix
+
+Modified Files:
+	Healpix.h 
+Log Message:
+fix type
+    *
+------------------------------------------------------------
 TAG
 Tag name: healpix-02-01-00, operation: add
 Package: healpix
