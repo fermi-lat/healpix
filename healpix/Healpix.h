@@ -3,7 +3,7 @@
 
 @author B. Lesnick (based on information from http://www.eso.org/science/healpix/) 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Healpix.h,v 1.3 2008/01/17 04:06:04 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Healpix.h,v 1.4 2008/05/03 19:39:56 burnett Exp $
 */
 
 #ifndef healpix_Healpix_h
@@ -77,7 +77,7 @@ public:
     astro::SkyDir::CoordSystem coordsys()const{return m_coordsys;}
     bool galactic()const{return m_coordsys==astro::SkyDir::GALACTIC; }
 
-    void findNeighbors(long index, std::vector<int> &neighbors)const;
+    void findNeighbors(int index, std::vector<int> &neighbors)const;
     void query_disc (const astro::SkyDir dir, double radius, std::vector<int> & v) const;
 
 //#define SWIG //Added to help
