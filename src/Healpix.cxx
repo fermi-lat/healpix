@@ -2,7 +2,7 @@
     @brief Healpix class implementation with code from WMAP
 
     @author B. Lesnick 
-    $Header: /nfs/slac/g/glast/ground/cvs/healpix/src/Healpix.cxx,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/healpix/src/Healpix.cxx,v 1.2 2008/05/03 19:39:56 burnett Exp $
 */
 /* Local Includes */
 
@@ -95,7 +95,7 @@ double Healpix::integrate(const astro::SkyFunction& f)const
     return std::accumulate(begin(), end(), 0., Integrand(f));
 }
 
-void Healpix::findNeighbors(long index, std::vector<int> &p) const
+void Healpix::findNeighbors(int index, std::vector<int> &p) const
 {
    
 #if 0  // now only slower?
