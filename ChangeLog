@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue May 13 18:29:32 PDT 2008
+healpix/src
+
+Modified Files:
+	Healpix.cxx 
+Log Message:
+fix type
+    *
+------------------------------------------------------------
 User: burnett  Tue May 13 18:29:31 PDT 2008
 healpix/healpix
 
