@@ -3,7 +3,7 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.10 2008/01/18 23:46:52 mar0 Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Map.h,v 1.11 2008/02/20 02:18:43 burnett Exp $
 */
 #include <string>
 #include <vector>
@@ -52,7 +52,7 @@ namespace healpix {
 
         /**@brief returns a constant reference to the Healpix map (time-intensive)
         */
-        Healpix_Map< T> cmap() const { return m_hm;}
+        const Healpix_Map< T>* cmap() const { return &m_hm;}
 
         /**@brief returns an array where a[i] is the ith moment of the angular power spectrum up to lmax
         */
