@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: mar0  Tue Oct 14 20:22:25 PDT 2008
+healpix/healpix
+
+Modified Files:
+	Map.h 
+Log Message:
+Fixed const reference to Map
+    *
+------------------------------------------------------------
+User: mar0  Tue Oct 14 20:22:25 PDT 2008
 healpix/doc
 
 Modified Files:
