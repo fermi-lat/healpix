@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jan 22 13:59:19 PST 2009
+healpix/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+remove local copy of fitsio.h; tag
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-09-00, operation: add
 Package: healpix
