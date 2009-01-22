@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jan 22 13:59:20 PST 2009
+healpix/src/base
+
+Removed Files:
+	fitsio.h 
+Log Message:
+remove local copy of fitsio.h; tag
+    *
+------------------------------------------------------------
 User: burnett  Thu Jan 22 13:59:19 PST 2009
 healpix/doc
 
