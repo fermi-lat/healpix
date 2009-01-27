@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon Jan 26 20:14:06 PST 2009
+healpix/healpix
+
+Modified Files:
+	CosineBinner.h 
+Log Message:
+tagging after extending CosineBinner interface for phi binning
+    *
+------------------------------------------------------------
+User: burnett  Mon Jan 26 20:14:06 PST 2009
 healpix/doc
 
 Modified Files:
