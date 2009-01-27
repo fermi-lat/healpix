@@ -1,8 +1,8 @@
 package healpix
 
-version v2r1p3
+version v2r2
 
-#$Id: requirements,v 1.30 2008/10/15 03:22:25 mar0 Exp $
+#$Id: requirements,v 1.31 2009/01/22 21:59:19 burnett Exp $
 
 author  T. Burnett <tburnett@u.washington.edu>
 
