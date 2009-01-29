@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Jan 29 14:37:42 PST 2009
+healpix/data
+
+Added Files:
+	Healpix Neighbors Nside=8.txt srctest.fits 
+Log Message:
+Responding to JIRA STGEN-86 on location of files for testing
+    *
+------------------------------------------------------------
+User: burnett  Thu Jan 29 14:37:42 PST 2009
 healpix/src/test
 
 Modified Files:
