@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jan 29 14:37:42 PST 2009
+healpix/src
+
+Modified Files:
+	HealPixel.cxx 
+Log Message:
+Responding to JIRA STGEN-86 on location of files for testing
+    *
+------------------------------------------------------------
 User: burnett  Thu Jan 29 14:36:26 PST 2009
 healpix/data
 
