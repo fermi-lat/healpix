@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sun Feb  1 14:09:42 PST 2009
+healpix/src
+
+Modified Files:
+	CosineBinner.cxx HealpixArrayIO.cxx 
+Log Message:
+
+    *
+------------------------------------------------------------
+User: burnett  Sun Feb  1 14:09:42 PST 2009
 healpix/healpix
 
 Modified Files:
