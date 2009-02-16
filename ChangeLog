@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Feb 16 13:54:31 PST 2009
+healpix/src
+
+Modified Files:
+	HealpixArrayIO.cxx 
+Log Message:
+minor mods to allow for phi binning possibility
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-10-00, operation: add
 Package: healpix
