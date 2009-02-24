@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Feb 24 12:51:23 PST 2009
+healpix/healpix
+
+Modified Files:
+	CosineBinner.h 
+Log Message:
+implement phi access function
+    *
+------------------------------------------------------------
 User: burnett  Tue Feb 24 10:48:45 PST 2009
 healpix/src
 
