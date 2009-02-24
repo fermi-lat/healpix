@@ -3,7 +3,7 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/CosineBinner.h,v 1.3 2009/01/27 04:14:06 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/CosineBinner.h,v 1.4 2009/02/01 22:09:42 burnett Exp $
 */
 
 #ifndef healpix_CosineBinner_h
@@ -65,14 +65,14 @@ public:
         return sum; 
 
     }
-
+                           
     /// integral over the range with functor accepting costheta, phi as args. 
     template<class G>
     double integral(const G& f)const
     {   
         double sum=0;
         for(const_iterator it=end_costh(); it!=end(); ++it){
-            sum += (*it)*f(costheta(it), phi(it) );
+            sum += (*it)*f.integral(costheta(it), phi(it) );
         }
         return sum; 
 
