@@ -3,7 +3,7 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/CosineBinner.cxx,v 1.4 2009/02/01 22:09:42 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/CosineBinner.cxx,v 1.5 2009/02/24 18:48:45 burnett Exp $
 */
 
 
@@ -85,20 +85,17 @@ const float& CosineBinner::operator[](double costheta)const
     return at( static_cast<int>(static_cast<int>(f*s_nbins)));
 }
 
-#if 0
-/// modifiable reference to the contents of the bin containing the cos(theta) value
-float& CosineBinner::operator()(double costheta, double phi)
-{
-
-    return (*this)[costheta]; //TODO
-}
 
 const float& CosineBinner::operator()(double costheta, double phi)const
 {
-    return (*this)[costheta]; //TODO
+    double f = (1.-costheta)/(1-s_cosmin);
+    if(s_sqrt_weight) f=sqrt(f);
+    int k( static_cast<int>(static_cast<int>(f*s_nbins)));
+    if( phi<0) return at(k); 
+    int n ( phi_index(phi) );
+    return at((k+1)*nphibins()+n);
 }
 
-#endif
 /// cos(theta) for the iterator
 double CosineBinner::costheta(std::vector<float>::const_iterator i)const
 {
