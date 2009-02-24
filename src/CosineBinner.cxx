@@ -3,7 +3,7 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/CosineBinner.cxx,v 1.3 2009/01/27 04:14:06 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/CosineBinner.cxx,v 1.4 2009/02/01 22:09:42 burnett Exp $
 */
 
 
@@ -35,6 +35,7 @@ size_t CosineBinner::cosine_index(double costheta)
 }
 double CosineBinner::folded_phi(double phi)
 {
+    if( phi<0) phi+= 2*M_PI;
     return  1.- fabs(pi4-fmod(phi, pi2) )/pi4 ;
 }
 size_t CosineBinner::phi_index(double phi)
