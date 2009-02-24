@@ -3,7 +3,7 @@
 
 @author M. Roth, T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/test/test_healpix.cxx,v 1.6 2009/01/29 22:37:42 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/test/test_healpix.cxx,v 1.7 2009/02/01 22:09:42 burnett Exp $
 */
 
 #include "healpix/Map.h"
@@ -36,7 +36,7 @@ namespace {
     class PhiFunct{
     public:
         PhiFunct(int power=0): p(power){}
-        double operator()(double z, double phi )const{return p==0?1.: std::pow(1.-z,p);}
+        double integral(double z, double phi )const{return p==0?1.: std::pow(1.-z,p);}
     int p;
     };
 }
