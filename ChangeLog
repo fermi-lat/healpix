@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jrb  Thu Jul  9 18:35:03 PDT 2009
+ScienceTools-scons/healpix
+
+Modified Files:
+	SConscript 
+Log Message:
+Clean up commented-out lines
+
+    *
+------------------------------------------------------------
 User: jrb  Thu Jul  9 18:32:21 PDT 2009
 ScienceTools-scons/healpix
 
