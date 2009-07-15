@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Wed Jul 15 10:36:25 PDT 2009
+healpix/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Added new line - version v2r2p3
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-15-03, operation: add
 Package: healpix
