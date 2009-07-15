@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+TAG
+Tag name: v2r2p3, operation: mov
+Package: healpix
+User: glastrm  Wed Jul 15 11:36:09 2009
+Files:
+  healpix/SConscript  1.17
+
+    *
+------------------------------------------------------------
 User: glastrm  Wed Jul 15 11:36:03 PDT 2009
 healpix
 
