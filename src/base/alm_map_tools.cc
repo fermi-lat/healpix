@@ -38,6 +38,28 @@
 
 using namespace std;
 
+
+static void get_chunk_info (int nrings, int &nchunks, int &chunksize)
+  {
+  nchunks = nrings/max(100,nrings/10) + 1;
+  chunksize = (nrings+nchunks-1)/nchunks;
+  }
+
+static void recalc_map2alm (int nph, int mmax, rfft &plan,
+  arr<xcomplex<double> > &shiftarr)
+  {
+  if (plan.size() == nph) return;
+  plan.Set (nph);
+  double f1 = pi/nph;
+  for (int m=0; m<=mmax; ++m)
+    {
+    if (m<nph)
+      shiftarr[m].Set (cos(m*f1),-sin(m*f1));
+    else
+      shiftarr[m]=-shiftarr[m-nph];
+    }
+  }
+
 namespace {
 
 void init_lam_fact_1d (int m, arr<double> &lam_fact)
@@ -57,12 +79,6 @@ void init_normal_l (arr<double> &normal_l)
   {
   for (int l=0; l<normal_l.size(); ++l)
     normal_l[l] = (l<2) ? 0. : sqrt(1./((l+2.)*(l+1.)*l*(l-1.)));
-  }
-
-void get_chunk_info (int nrings, int &nchunks, int &chunksize)
-  {
-  nchunks = nrings/max(100,nrings/10) + 1;
-  chunksize = (nrings+nchunks-1)/nchunks;
   }
 
 void fill_work (const xcomplex<double> *datain, int nph, int mmax,
@@ -95,21 +111,6 @@ void read_work (const arr<xcomplex<double> >& work, int nph, int mmax,
     }
   if (shifted)
     for (int m=0; m<=mmax; ++m) dataout[m] *= shiftarr[m];
-  }
-
-void recalc_map2alm (int nph, int mmax, rfft &plan,
-  arr<xcomplex<double> > &shiftarr)
-  {
-  if (plan.size() == nph) return;
-  plan.Set (nph);
-  double f1 = pi/nph;
-  for (int m=0; m<=mmax; ++m)
-    {
-    if (m<nph)
-      shiftarr[m].Set (cos(m*f1),-sin(m*f1));
-    else
-      shiftarr[m]=-shiftarr[m-nph];
-    }
   }
 
 template<typename T> void fft_map2alm (int nph, int mmax, bool shifted,
@@ -171,6 +172,7 @@ template<typename T> void map2alm (const Healpix_Map<T> &map,
   int lmax = alm.Lmax(), mmax = alm.Mmax(), nside = map.Nside();
 
   int nchunks, chunksize;
+  void get_chunk_info (int nrings, int &nchunks, int &chunksize);
   get_chunk_info(2*nside,nchunks,chunksize);
 
   arr2<xcomplex<double> > phas_n(chunksize,mmax+1), phas_s(chunksize,mmax+1);
@@ -201,6 +203,8 @@ template<typename T> void map2alm (const Healpix_Map<T> &map,
                          shifted);
       istart_south = 12*nside*nside - istart_north - nph;
 
+      void recalc_map2alm (int nph, int mmax, rfft &plan,
+			   arr<xcomplex<double> > &shiftarr);
       recalc_map2alm (nph, mmax, plan, shiftarr);
       fft_map2alm (nph, mmax, shifted, weight[ith]*normfact, plan,
         &map[istart_north], &map[istart_south], phas_n[ith-llim],
@@ -349,6 +353,7 @@ template<typename T> void map2alm_pol
   init_normal_l (normal_l);
 
   int nchunks, chunksize;
+  void get_chunk_info (int nrings, int &nchunks, int &chunksize);
   get_chunk_info(2*nside,nchunks,chunksize);
 
   arr2<xcomplex<double> > phas_nT(chunksize,mmax+1),phas_sT(chunksize,mmax+1),
@@ -383,6 +388,8 @@ template<typename T> void map2alm_pol
                           shifted);
       istart_south = 12*nside*nside - istart_north - nph;
 
+      void recalc_map2alm (int nph, int mmax, rfft &plan,
+			   arr<xcomplex<double> > &shiftarr);
       recalc_map2alm (nph, mmax, plan, shiftarr);
       fft_map2alm (nph, mmax, shifted, weightT[ith]*normfact, plan,
         &mapT[istart_north], &mapT[istart_south], phas_nT[ith-llim],
@@ -588,6 +595,7 @@ template<typename T> void alm2map (const Alm<xcomplex<T> > &alm,
   int lmax = alm.Lmax(), mmax = alm.Mmax(), nside = map.Nside();
 
   int nchunks, chunksize;
+  void get_chunk_info (int nrings, int &nchunks, int &chunksize);
   get_chunk_info(2*nside,nchunks,chunksize);
 
   arr2<xcomplex<double> > b_north(chunksize,mmax+1), b_south(chunksize,mmax+1);
@@ -705,6 +713,7 @@ template<typename T> void alm2map_pol
   init_normal_l (normal_l);
 
   int nchunks, chunksize;
+  void get_chunk_info (int nrings, int &nchunks, int &chunksize);
   get_chunk_info(2*nside,nchunks,chunksize);
 
   arr2<xcomplex<double> >
@@ -852,6 +861,7 @@ template<typename T> void alm2map_der1
   int lmax = alm.Lmax(), mmax = alm.Mmax(), nside = map.Nside();
 
   int nchunks, chunksize;
+  void get_chunk_info (int nrings, int &nchunks, int &chunksize);
   get_chunk_info(2*nside,nchunks,chunksize);
 
   arr2<xcomplex<double> >

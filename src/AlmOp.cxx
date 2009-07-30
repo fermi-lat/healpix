@@ -3,7 +3,7 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/AlmOp.cxx,v 1.3 2008/01/07 20:00:43 mar0 Exp $
+$Header: /glast/ScienceTools/glast/healpix/src/AlmOp.cxx,v 1.5 2008/08/12 14:01:47 elwinter Exp $
 */
 
 #include "healpix/AlmOp.h"
@@ -13,14 +13,14 @@ $Header: /nfs/slac/g/glast/ground/cvs/healpix/src/AlmOp.cxx,v 1.3 2008/01/07 20:
 
 using namespace healpix;
 
-template<typename T> healpix::AlmOp<T>::AlmOp() :m_alm(0,0) {
+template<typename T> AlmOp<T>::AlmOp() :m_alm(0,0) {
 }
 
 template AlmOp<xcomplex<float> >::AlmOp();
 template AlmOp<xcomplex<double> >::AlmOp();
 
 
-template<typename T> healpix::AlmOp<T>::AlmOp(int lmax, int mmax):m_alm(lmax,mmax) {
+template<typename T> AlmOp<T>::AlmOp(int lmax, int mmax):m_alm(lmax,mmax) {
 }
 template AlmOp<xcomplex<float> >::AlmOp(int lmax, int mmax);
 template AlmOp<xcomplex<double> >::AlmOp(int lmax, int mmax);

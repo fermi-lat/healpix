@@ -1,6 +1,6 @@
 /** @file HealpixMap.cxx
     @brief implement HealpixMap
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/HealpixMap.cxx,v 1.2 2007/11/27 03:56:47 burnett Exp $
+$Header: /glast/ScienceTools/glast/healpix/src/HealpixMap.cxx,v 1.2 2008/06/28 19:28:38 elwinter Exp $
 */
 
 #include "healpix/HealpixMap.h"
@@ -40,7 +40,7 @@ void HealpixMap::load(std::string filename)
 
 double HealpixMap::operator ()(const astro::SkyDir& dir)const
 {
-    HealPixel hp(dir, m_level);
+    HealPixel hp(dir, (unsigned int) m_level);
     const_iterator it (find(hp.index()) );
     return it != end() ? it->second : 0;   
 }
