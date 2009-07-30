@@ -3,7 +3,7 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/Map.cxx,v 1.6 2008/01/07 20:00:43 mar0 Exp $
+$Header: /glast/ScienceTools/glast/healpix/src/Map.cxx,v 1.3 2008/06/28 19:28:38 elwinter Exp $
 */
 
 #include "healpix/Map.h"
@@ -41,7 +41,7 @@ template<typename T> Map<T>::Map(const astro::SkyFunction& f,int level):m_factor
 #pragma omp for schedule(dynamic,1) 
 #endif
         for(int i=0;i< m_hm.Npix();++i) {
-            m_hm[i]=f(healpix::HealPixel(m_hm.ring2nest(i),level));
+            m_hm[i]=f(healpix::HealPixel(m_hm.ring2nest(i),(unsigned int) level));
         }
 #ifdef _OPENMP
     }
@@ -120,10 +120,10 @@ template<typename T> Map<T> Map<T>::operator+(Map<T> &other) {
             //use higher resolution of the two maps to do weighted addition
             if(m_hm.Order()>other.map()->Order()) {
                 int diff = (1 << 2*(m_hm.Order()-other.map()->Order()));
-                (*rmap.map())[i] = diff*m_hm[i]+other(HealPixel(m_hm.ring2nest(i),m_hm.Order()));
+                (*rmap.map())[i] = diff*m_hm[i]+other(HealPixel(m_hm.ring2nest(i),(unsigned int) m_hm.Order()));
             } else {
                 int diff = (1 << 2*(other.map()->Order()-m_hm.Order()));
-                (*rmap.map())[i] = m_hm[m_hm.nest2ring(HealPixel(HealPixel(other.map()->ring2nest(i),other.map()->Order()),m_hm.Order()).index())]+diff*(*other.map())[i];
+                (*rmap.map())[i] = m_hm[m_hm.nest2ring(HealPixel(HealPixel(other.map()->ring2nest(i),(unsigned int) other.map()->Order()), (unsigned int) m_hm.Order()).index())]+diff*(*other.map())[i];
             }
         }
     }
