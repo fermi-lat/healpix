@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jrb  Tue Sep 22 14:20:25 PDT 2009
+healpix/healpix
+
+Modified Files:
+	HealpixArray.h 
+Log Message:
+Avoid compile warnings (RHEL4) or error (RHEL5)
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-15-01-02, operation: del
 Package: healpix
