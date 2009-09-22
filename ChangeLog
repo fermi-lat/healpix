@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Tue Sep 22 14:53:25 PDT 2009
+ScienceTools-scons/healpix
+
+Modified Files:
+	SConscript 
+Log Message:
+GoGui_auto-tag
+    *
+------------------------------------------------------------
 User: jrb  Tue Sep 22 14:53:03 PDT 2009
 healpix/cmt
 
