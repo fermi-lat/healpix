@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jrb  Thu Oct  1 14:33:45 PDT 2009
+ScienceTools-scons/healpix
+
+Modified Files:
+	.cvsignore SConscript 
+Log Message:
+Move files src/base/*.h to healpix/base/*.h
+Ignore SCons build products in .cvsignore
+
+    *
+------------------------------------------------------------
 User: jrb  Thu Oct  1 14:27:45 PDT 2009
 ScienceTools-scons/healpix/healpix/base
 
