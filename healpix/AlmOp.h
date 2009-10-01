@@ -3,10 +3,10 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/AlmOp.h,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/healpix/AlmOp.h,v 1.2 2007/05/16 23:57:57 burnett Exp $
 */
 
-#include "../src/base/alm.h"
+#include "healpix/base/alm.h"
 
 namespace healpix {
 

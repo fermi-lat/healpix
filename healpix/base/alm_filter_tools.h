@@ -3,7 +3,7 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/base/alm_filter_tools.h,v 1.16 2006/05/08 21:31:18 mar0 Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/src/base/alm_filter_tools.h,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
 */
 
 #include "xcomplex.h"

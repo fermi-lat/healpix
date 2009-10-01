@@ -3,13 +3,13 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/AlmOp.cxx,v 1.3 2008/01/07 20:00:43 mar0 Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/src/AlmOp.cxx,v 1.4 2008/02/24 18:23:11 burnett Exp $
 */
 
 #include "healpix/AlmOp.h"
-#include "base/xcomplex.h"
-#include "base/alm.h"
-#include "base/cxxutils.h"
+#include "healpix/base/xcomplex.h"
+#include "healpix/base/alm.h"
+#include "healpix/base/cxxutils.h"
 
 using namespace healpix;
 
