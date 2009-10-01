@@ -1,4 +1,20 @@
 ------------------------------------------------------------
+User: jrb  Thu Oct  1 14:33:46 PDT 2009
+ScienceTools-scons/healpix/healpix/base
+
+Added Files:
+	alm.h alm_filter_tools.h alm_map_tools.h alm_powspec_tools.h 
+	arr.h bluestein.h constants.h cxxutils.h datatypes.h fftpack.h 
+	fftpack_support.h fitshandle.h healpix_base.h healpix_map.h 
+	healpix_map_fitsio.h longnam.h ls_fft.h message_error.h 
+	openmp_support.h planck_rng.h pointing.h powspec.h rotmatrix.h 
+	vec3.h xcomplex.h ylmgen.h 
+Log Message:
+Move files src/base/*.h to healpix/base/*.h
+Ignore SCons build products in .cvsignore
+
+    *
+------------------------------------------------------------
 User: jrb  Thu Oct  1 14:33:45 PDT 2009
 ScienceTools-scons/healpix/healpix
 
