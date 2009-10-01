@@ -2,14 +2,14 @@
     @brief Healpix class implementation with code from WMAP
 
     @author B. Lesnick 
-    $Header: /nfs/slac/g/glast/ground/cvs/healpix/src/Healpix.cxx,v 1.2 2008/05/03 19:39:56 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/src/Healpix.cxx,v 1.3 2008/05/14 01:29:32 burnett Exp $
 */
 /* Local Includes */
 
 #include "healpix/Healpix.h"
-#include "base/healpix_base.h"
-#include "base/pointing.h" ///< NASA library for ra,d
-#include "base/arr.h"
+#include "healpix/base/healpix_base.h"
+#include "healpix/base/pointing.h" ///< NASA library for ra,d
+#include "healpix/base/arr.h"
 
 ///< NASA healpix class
 /* Standard Includes */
