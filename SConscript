@@ -2,9 +2,9 @@
 # @file SConscript
 # @brief build info for package healpix
 #
-# $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/SConscript,v 1.21 2010/02/18 00:56:25 jrb Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/healpix/SConscript,v 1.22 2010/02/22 20:21:49 jrb Exp $
 # Authors: T. Burnett <tburnett@u.washington.edu>
-# Version: healpix-02-03-00
+# Version: healpix-02-03-01
 
 Import('baseEnv')
 Import('listFiles')
