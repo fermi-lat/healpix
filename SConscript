@@ -2,7 +2,7 @@
 # @file SConscript
 # @brief build info for package healpix
 #
-# $Header: /nfs/slac/g/glast/ground/cvs/healpix/SConscript,v 1.23 2010/02/22 20:49:00 jrb Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/SConscript,v 1.24 2010/02/24 20:04:36 jrb Exp $
 # Authors: T. Burnett <tburnett@u.washington.edu>
 # Version: healpix-02-03-02
 
@@ -11,9 +11,7 @@ Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
-if baseEnv['PLATFORM'] == "win32":
-    libEnv.Tool('healpixLib', depsOnly = 1)
-
+libEnv.Tool('addLinkDeps', package='healpix', toBuild='shared')
 progEnv.Tool('healpixLib')
 
 healpixLib = libEnv.SharedLibrary('healpix', 
