@@ -3,7 +3,7 @@
 
 @author B. Lesnick (based on information from http://www.eso.org/science/healpix/) 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Healpix.h,v 1.4 2008/05/03 19:39:56 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Healpix.h,v 1.5 2008/05/14 01:29:31 burnett Exp $
 */
 
 #ifndef healpix_Healpix_h
@@ -159,7 +159,7 @@ public:
     // direct access to NASA healpix routines
     void pix2ang(long index, double &theta, double &phi)const;
     void ang2pix(double theta, double phi, long &index)const;
-    
+  
 
 private:
     astro::SkyDir::CoordSystem m_coordsys;///< how to define SkyDir
