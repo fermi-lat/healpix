@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: kerrm  Mon Jul 12 17:49:18 PDT 2010
+healpix/src
+
+Modified Files:
+	Healpix.cxx 
+Log Message:
+Fixed query_disc to return pixels about user-specified position rather than the pixel closest to.  Added some inline helper methods to clean up the code a bit.
+    *
+------------------------------------------------------------
 User: kerrm  Mon Jul 12 17:49:17 PDT 2010
 healpix/healpix
 
