@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jul 29 08:56:08 PDT 2010
+ScienceTools-scons/healpix/healpix
+
+Modified Files:
+	Healpix.h 
+Log Message:
+oops: put the trait definitions in the wrong place for checkin.
+    *
+------------------------------------------------------------
 User: burnett  Wed Jul 28 20:19:53 PDT 2010
 ScienceTools-scons/healpix/healpix
 
