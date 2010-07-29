@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Jul 28 20:19:53 PDT 2010
+ScienceTools-scons/healpix/healpix
+
+Modified Files:
+	Healpix.h 
+Log Message:
+add traits to an iterator for STL compliance
+    *
+------------------------------------------------------------
 User: kerrm  Mon Jul 12 17:49:18 PDT 2010
 healpix/src
 
