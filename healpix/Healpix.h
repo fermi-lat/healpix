@@ -3,7 +3,7 @@
 
 @author B. Lesnick (based on information from http://www.eso.org/science/healpix/) 
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/Healpix.h,v 1.5 2008/05/14 01:29:31 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/healpix/Healpix.h,v 1.6 2010/07/13 00:49:17 kerrm Exp $
 */
 
 #ifndef healpix_Healpix_h
@@ -50,6 +50,13 @@ public:
 
     typedef enum { RING=0,
         NESTED=1, NEST=1} Ordering;
+
+		// these traits needed  for STL functions like accumulate
+		typedef const Healpix& reference;
+		typedef const Healpix* pointer;
+		typedef Healpix value_type;
+		typedef std::forward_iterator_tag iterator_category;
+		typedef int difference_type;
 
     /**@brief specify configuration
     @param nside Number of divisions of the side of 
