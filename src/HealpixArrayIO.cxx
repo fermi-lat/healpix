@@ -3,12 +3,13 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/HealpixArrayIO.cxx,v 1.5 2009/02/01 22:09:42 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/src/HealpixArrayIO.cxx,v 1.6 2009/02/16 21:54:31 burnett Exp $
 */
 
 #include "healpix/HealpixArrayIO.h"
 #include "tip/IFileSvc.h"
 
+#include <cstdio>
 #include <cmath>
 #include <errno.h>
 #include <sstream>
