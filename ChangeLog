@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: cohen  Mon Dec 20 11:30:15 PST 2010
+ScienceTools-scons/healpix/src
+
+Modified Files:
+	HealpixArrayIO.cxx 
+Log Message:
+fix gcc 4.4 build
+    *
+------------------------------------------------------------
+User: cohen  Mon Dec 20 11:30:15 PST 2010
 ScienceTools-scons/healpix/src/base
 
 Modified Files:
