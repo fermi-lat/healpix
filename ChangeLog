@@ -2,6 +2,16 @@
 TAG
 Tag name: healpix-02-03-05, operation: add
 Package: healpix
+User: cohen  Mon Dec 20 11:40:03 2010
+Files:
+  healpix/data/Healpix  Neighbors
+  healpix/data/srctest.fits  1.1
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: healpix-02-03-05, operation: add
+Package: healpix
 User: cohen  Mon Dec 20 11:39:54 2010
 Files:
   healpix/cmt/.cvsignore  1.1.1.1
