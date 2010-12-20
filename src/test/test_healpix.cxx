@@ -3,7 +3,7 @@
 
 @author M. Roth, T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/src/test/test_healpix.cxx,v 1.8 2009/02/24 21:02:21 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/src/test/test_healpix.cxx,v 1.9 2009/10/01 21:33:48 jrb Exp $
 */
 
 #include "healpix/Map.h"
@@ -21,6 +21,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/src/test/test_h
 using namespace std;
 using namespace healpix;
 #include <cmath>
+#include <typeinfo>
 
 namespace {
 
