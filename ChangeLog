@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: gudlaugu  Fri Feb 10 17:14:28 PST 2012
+ScienceTools-scons/healpix/src
+
+Modified Files:
+	CosineBinner.cxx 
+Log Message:
+Removing SolarSystemTools as the initial import failed miserably
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-27-00, operation: add
 Package: healpix
