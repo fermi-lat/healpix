@@ -3,7 +3,7 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/CosineBinner.cxx,v 1.5 2009/02/24 18:48:45 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/src/CosineBinner.cxx,v 1.6 2009/02/24 20:51:23 burnett Exp $
 */
 
 
@@ -12,7 +12,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/healpix/src/CosineBinner.cxx,v 1.5 2009/02
 #include <stdexcept>
 
 namespace{
-    double pi4( M_PI/4.0), pi2(M_PI/2.);
+    const double pi4( M_PI/4.0), pi2(M_PI/2.);
 
 }
 using namespace healpix;
