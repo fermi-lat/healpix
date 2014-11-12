@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: asercion  Wed Nov 12 10:07:55 PST 2014
+healpix/src/base
+
+Modified Files:
+	alm_filter_tools.cc 
+Log Message:
+Mavericks compatibility update
+    *
+------------------------------------------------------------
+User: asercion  Wed Nov 12 10:07:55 PST 2014
 healpix/healpix/base
 
 Modified Files:
