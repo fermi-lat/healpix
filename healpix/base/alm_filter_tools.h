@@ -3,7 +3,7 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/src/base/alm_filter_tools.h,v 1.1.1.1 2007/05/15 23:22:21 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/healpix/healpix/base/alm_filter_tools.h,v 1.1 2009/10/01 21:33:46 jrb Exp $
 */
 
 #include "xcomplex.h"
@@ -41,6 +41,11 @@ template<typename T> void saf_constantnoise(Alm<T> &sky,Alm<T> &psf,double cnl);
 @param noise  healpix fits file with background
 */
 template<typename T> void saf_noise(Alm<T> &sky,Alm<T> &psf,Alm<T> &noise);
+
+/**@brief return alm complex conjugate
+@param alm  An alm complex object
+*/
+template<typename T> Alm<xcomplex<T> > conjugate(Alm<xcomplex<T> > &alm);
 
 
 //------------------DILATED SPHERICAL FFTS-------------------------//
