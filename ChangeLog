@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: echarles  Fri Mar 27 13:30:44 PDT 2015
+ScienceTools-scons/healpix/src/test
+
+Modified Files:
+	TestHealpix.h test_healpix.cxx 
+Log Message:
+update healpix to use external package
+    *
+------------------------------------------------------------
+User: echarles  Fri Mar 27 13:30:44 PDT 2015
 ScienceTools-scons/healpix/src
 
 Modified Files:
