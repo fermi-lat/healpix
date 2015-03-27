@@ -3,7 +3,7 @@
 
 @author B. Lesnick (based on information from http://www.eso.org/science/healpix/) 
 
-$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/healpix/Healpix.h,v 1.7 2010/07/29 03:19:53 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/users/echarles/healpix_changes/healpix/healpix/Healpix.h,v 1.4 2015/03/05 19:58:39 echarles Exp $
 */
 
 #ifndef healpix_Healpix_h
@@ -15,7 +15,8 @@ $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/healpix/Healpix
 #include <vector>
 ///< needed fixed size array class
 
-class Healpix_Base;
+// EAC, comment out this forward declare, as it conflicts with the HEALPix external
+//class Healpix_Base;
 
 namespace healpix{
 /**

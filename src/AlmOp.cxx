@@ -3,13 +3,14 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/src/AlmOp.cxx,v 1.4 2008/02/24 18:23:11 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/users/echarles/healpix_changes/healpix/src/AlmOp.cxx,v 1.4 2015/03/05 19:58:40 echarles Exp $
 */
 
 #include "healpix/AlmOp.h"
-#include "healpix/base/xcomplex.h"
-#include "healpix/base/alm.h"
-#include "healpix/base/cxxutils.h"
+
+// EAC, update include path
+#include "xcomplex.h"
+#include "alm.h"
 
 using namespace healpix;
 

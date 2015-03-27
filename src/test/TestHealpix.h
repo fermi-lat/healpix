@@ -1,7 +1,7 @@
 /** @file TestHealpix.h
 @brief code to test the class Healpix
 
-$Header: /nfs/slac/g/glast/ground/cvs/healpix/src/test/TestHealpix.h,v 1.2 2007/12/10 02:02:52 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/users/echarles/healpix_changes/healpix/src/test/TestHealpix.h,v 1.4 2015/03/05 19:58:41 echarles Exp $
 
 */
 
@@ -12,6 +12,8 @@ $Header: /nfs/slac/g/glast/ground/cvs/healpix/src/test/TestHealpix.h,v 1.2 2007/
 #include <iomanip>
 #include <stdexcept>
 #include <fstream>
+// EAC, adding this to compile
+#include <map>
 
 
 

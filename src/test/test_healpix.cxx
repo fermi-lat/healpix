@@ -3,11 +3,12 @@
 
 @author M. Roth, T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/src/test/test_healpix.cxx,v 1.9 2009/10/01 21:33:48 jrb Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/users/echarles/healpix_changes/healpix/src/test/test_healpix.cxx,v 1.4 2015/03/05 19:58:41 echarles Exp $
 */
 
 #include "healpix/Map.h"
-#include "healpix/base/message_error.h"
+// EAC, the error handling has changed
+#include "error_handling.h"
 #include "healpix/HealPixel.h"
 #include "TestHealpix.h"
 #include "TestHealpixArray.h"
@@ -142,7 +143,8 @@ int main() {
         }
 
     }
-    catch (const Message_error & error) {
+    // EAC, the error handling has changed
+    catch (const PlanckError& error ) {
         std::cout << error.what() << std::endl;
         rc =1;
     }
