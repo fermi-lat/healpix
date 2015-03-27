@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: echarles  Fri Mar 27 13:30:43 PDT 2015
+ScienceTools-scons/healpix/healpix
+
+Modified Files:
+	AlmOp.h Healpix.h Map.h 
+Added Files:
+	alm_filter_tools.h 
+Log Message:
+update healpix to use external package
+    *
+------------------------------------------------------------
 User: echarles  Fri Mar 27 13:30:42 PDT 2015
 ScienceTools-scons/healpix
 
