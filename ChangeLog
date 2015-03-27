@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: echarles  Fri Mar 27 13:27:15 PDT 2015
+ScienceTools-scons/healpix/src/base
+
+Removed Files:
+	alm_filter_tools.cc alm_map_tools.cc alm_powspec_tools.cc 
+	bluestein.c cxxutils.cc fftpack.c fitshandle.cc 
+	healpix_base.cc healpix_map.cc healpix_map_fitsio.cc ls_fft.c 
+	powspec.cc rotmatrix.cc 
+Log Message:
+remove external code from healpix package
+    *
+------------------------------------------------------------
 User: echarles  Fri Mar 27 13:27:14 PDT 2015
 ScienceTools-scons/healpix/healpix/base
 
