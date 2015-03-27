@@ -3,10 +3,11 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/healpix/AlmOp.h,v 1.2 2007/05/16 23:57:57 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/users/echarles/healpix_changes/healpix/healpix/AlmOp.h,v 1.4 2015/03/05 19:58:38 echarles Exp $
 */
 
-#include "healpix/base/alm.h"
+// EAC, update include path
+#include "alm.h"
 
 namespace healpix {
 

@@ -3,12 +3,15 @@
 
 @author M. Roth 
 
-$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/healpix/Map.h,v 1.12 2008/10/15 03:22:25 mar0 Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/users/echarles/healpix_changes/healpix/healpix/Map.h,v 1.4 2015/03/05 19:58:39 echarles Exp $
 */
 #include <string>
 #include <vector>
-#include "healpix/base/healpix_map.h"
-#include "healpix/base/powspec.h"
+
+// EAC, update include path
+#include "healpix_map.h"
+#include "powspec.h"
+
 #include "astro/SkyFunction.h"
 #include "healpix/HealPixel.h"
 
