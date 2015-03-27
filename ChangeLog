@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: echarles  Fri Mar 27 13:30:42 PDT 2015
+ScienceTools-scons/healpix
+
+Modified Files:
+	SConscript healpixLib.py 
+Log Message:
+update healpix to use external package
+    *
+------------------------------------------------------------
 User: echarles  Fri Mar 27 13:27:15 PDT 2015
 ScienceTools-scons/healpix/src/base
 
