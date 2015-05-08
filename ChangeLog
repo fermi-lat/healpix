@@ -1,5 +1,84 @@
 ------------------------------------------------------------
 TAG
+Tag name: ScienceTools-10-00-05, operation: add
+Package: healpix
+User: jchiang  Thu May  7 21:46:35 2015
+Files:
+  healpix/.cvsignore  1.3
+  healpix/ChangeLog  1.347
+  healpix/healpixLib.py  1.3
+  healpix/SConscript  1.29
+  healpix/cmt/.cvsignore  1.1.1.1
+  healpix/cmt/NMake  1.1.1.1
+  healpix/cmt/requirements  1.42
+  healpix/data/Healpix  Neighbors
+  healpix/data/srctest.fits  1.1
+  healpix/doc/.cvsignore  1.1.1.1
+  healpix/doc/release.notes  1.42
+  healpix/healpix/HealPixel.h  1.4
+  healpix/healpix/Map.h  1.13
+  healpix/healpix/HeallpixMap.h  1.1
+  healpix/healpix/CosineBinner.h  1.6
+  healpix/healpix/HealpixArray.h  1.4
+  healpix/healpix/AlmOp.h  1.3
+  healpix/healpix/Healpix.h  1.8
+  healpix/healpix/HealpixArrayIO.h  1.1
+  healpix/healpix/HealpixMap.h  1.3
+  healpix/healpix/base/ylmgen.h  1.1
+  healpix/healpix/base/rotmatrix.h  1.1
+  healpix/healpix/base/pointing.h  1.1
+  healpix/healpix/base/planck_rng.h  1.1
+  healpix/healpix/base/powspec.h  1.1
+  healpix/healpix/base/ls_fft.h  1.1
+  healpix/healpix/base/healpix_base.h  1.1
+  healpix/healpix/base/bluestein.h  1.1
+  healpix/healpix/base/alm.h  1.1
+  healpix/healpix/base/xcomplex.h  1.1
+  healpix/healpix/base/cxxutils.h  1.1
+  healpix/healpix/base/vec3.h  1.1
+  healpix/healpix/base/healpix_map.h  1.1
+  healpix/healpix/base/message_error.h  1.1
+  healpix/healpix/base/fitshandle.h  1.1
+  healpix/healpix/base/alm_filter_tools.h  1.1
+  healpix/healpix/base/longnam.h  1.1
+  healpix/healpix/base/fftpack.h  1.1
+  healpix/healpix/base/arr.h  1.1
+  healpix/healpix/base/alm_map_tools.h  1.1
+  healpix/healpix/base/openmp_support.h  1.1
+  healpix/healpix/base/constants.h  1.1
+  healpix/healpix/base/fftpack_support.h  1.1
+  healpix/healpix/base/datatypes.h  1.1
+  healpix/healpix/base/healpix_map_fitsio.h  1.1
+  healpix/healpix/base/alm_powspec_tools.h  1.1
+  healpix/src/HealpixArrayIO.cxx  1.7
+  healpix/src/Healpix.cxx  1.5
+  healpix/src/CosineBinner.cxx  1.8
+  healpix/src/Map.cxx  1.8
+  healpix/src/HealPixel.cxx  1.6
+  healpix/src/mainpage.h  1.1.1.1
+  healpix/src/swig_setup.in  1.1
+  healpix/src/HealpixMap.cxx  1.3
+  healpix/src/AlmOp.cxx  1.5
+  healpix/src/base/ls_fft.c  1.2
+  healpix/src/base/fitshandle.cc  1.3
+  healpix/src/base/alm_map_tools.cc  1.3
+  healpix/src/base/alm_filter_tools.cc  1.5
+  healpix/src/base/healpix_map.cc  1.3
+  healpix/src/base/healpix_map_fitsio.cc  1.2
+  healpix/src/base/powspec.cc  1.2
+  healpix/src/base/bluestein.c  1.2
+  healpix/src/base/alm_powspec_tools.cc  1.3
+  healpix/src/base/healpix_base.cc  1.2
+  healpix/src/base/rotmatrix.cc  1.2
+  healpix/src/base/cxxutils.cc  1.2
+  healpix/src/base/fftpack.c  1.2
+  healpix/src/test/TestHealpix.h  1.3
+  healpix/src/test/TestHealpixArray.h  1.2
+  healpix/src/test/test_healpix.cxx  1.10
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: ScienceTools-10-00-04, operation: add
 Package: healpix
 User: jchiang  Thu Apr 23 21:21:09 2015
