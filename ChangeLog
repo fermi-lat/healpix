@@ -1,4 +1,12 @@
 ------------------------------------------------------------
+User: echarles  Thu Dec  3 14:59:46 PST 2015
+healpix/src
+
+Modified Files:
+	AlmOp.cxx alm_filter_tools.cxx 
+Log Message:
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-10-00-05, operation: add
 Package: healpix
