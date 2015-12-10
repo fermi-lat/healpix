@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: echarles  Wed Dec  9 22:46:36 PST 2015
+healpix
+
+Modified Files:
+	SConscript 
+Log Message:
+stag/GoGui_auto-tag
+    *
+------------------------------------------------------------
 TAG
 Tag name: healpix-02-05-00, operation: add
 Package: healpix
