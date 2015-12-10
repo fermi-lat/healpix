@@ -3,11 +3,12 @@
 
   package healpix
 
-$Id: release.notes,v 1.43 2015/03/27 20:31:45 echarles Exp $
+$Id: release.notes,v 1.44 2015/12/04 18:41:10 echarles Exp $
 
 @verbatim
  * EOH *
 
+ healpix-02-05-01 09-Dec-2015 echarles updates for new healpix version
  healpix-02-05-00 04-Dec-2015 echarles Migrate to healpix 3.30
  healpix-02-04-00 27-Mar-2015 echarles update healpix to use external instead a copy in healpix/base
  healpix-02-03-06 20-Jun-2012 jchiang fix indexing error for very small values of costheta in CosineBinner::fill(double, double, double)
