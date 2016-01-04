@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: echarles  Mon Jan  4 08:59:26 PST 2016
+healpix/healpix
+
+Added Files:
+	HealpixRegion.h 
+Log Message:
+Added HealpixRegion
+    *
+------------------------------------------------------------
 TAG
 Tag name: healpix-02-05-01, operation: add
 Package: healpix
