@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: echarles  Wed Feb  3 16:54:13 PST 2016
+healpix/src
+
+Modified Files:
+	HealpixRegion.cxx 
+Log Message:
+Added error messages to HealpixRegion
+    *
+------------------------------------------------------------
 TAG
 Tag name: healpix-02-05-02, operation: add
 Package: healpix
