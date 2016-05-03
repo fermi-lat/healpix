@@ -2,6 +2,14 @@
 TAG
 Tag name: ScienceTools-11-01-01, operation: add
 Package: healpix
+User: jchiang  Tue May  3 09:55:43 2016
+Files:
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: ScienceTools-11-01-01, operation: add
+Package: healpix
 User: jchiang  Tue May  3 09:37:35 2016
 Files:
   healpix/doc/.cvsignore  1.1.1.1
