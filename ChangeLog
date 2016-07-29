@@ -1,5 +1,49 @@
 ------------------------------------------------------------
 TAG
+Tag name: ScienceTools-11-03-00, operation: add
+Package: healpix
+User: glastrm  Fri Jul 29 16:26:38 2016
+Files:
+  healpix/.cvsignore  1.3
+  healpix/ChangeLog  1.405
+  healpix/healpixLib.py  1.4
+  healpix/SConscript  1.34
+  healpix/cmt/.cvsignore  1.1.1.1
+  healpix/cmt/NMake  1.1.1.1
+  healpix/cmt/requirements  1.46
+  healpix/data/Healpix  Neighbors
+  healpix/data/srctest.fits  1.1
+  healpix/doc/.cvsignore  1.1.1.1
+  healpix/doc/release.notes  1.46
+  healpix/healpix/HealPixel.h  1.4
+  healpix/healpix/Map.h  1.14
+  healpix/healpix/HealpixRegion.h  1.1
+  healpix/healpix/HeallpixMap.h  1.1
+  healpix/healpix/CosineBinner.h  1.6
+  healpix/healpix/alm_filter_tools.h  1.1
+  healpix/healpix/HealpixArray.h  1.4
+  healpix/healpix/AlmOp.h  1.4
+  healpix/healpix/Healpix.h  1.9
+  healpix/healpix/HealpixArrayIO.h  1.1
+  healpix/healpix/HealpixMap.h  1.3
+  healpix/src/HealpixArrayIO.cxx  1.7
+  healpix/src/Healpix.cxx  1.6
+  healpix/src/CosineBinner.cxx  1.8
+  healpix/src/alm_filter_tools.cxx  1.2
+  healpix/src/Map.cxx  1.9
+  healpix/src/mainpage.h  1.1.1.1
+  healpix/src/HealPixel.cxx  1.6
+  healpix/src/swig_setup.in  1.1
+  healpix/src/HealpixRegion.cxx  1.1
+  healpix/src/HealpixMap.cxx  1.3
+  healpix/src/AlmOp.cxx  1.7
+  healpix/src/test/TestHealpix.h  1.4
+  healpix/src/test/TestHealpixArray.h  1.2
+  healpix/src/test/test_healpix.cxx  1.11
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: ScienceTools-11-02-00, operation: add
 Package: healpix
 User: glastrm  Wed Jul  6 15:01:26 2016
