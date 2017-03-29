@@ -1,9 +1,9 @@
 /** @file release.notes
 @brief healpix package relase notes
-
+@brief Package coordinators: T. Burnett, E. Charles 
   package healpix
 
-$Id: release.notes,v 1.45 2015/12/10 06:46:36 echarles Exp $
+$Id: release.notes,v 1.46 2016/01/04 17:08:50 echarles Exp $
 
 @verbatim
  * EOH *
