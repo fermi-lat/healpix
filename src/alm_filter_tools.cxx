@@ -117,7 +117,7 @@ template<typename T> Alm<xcomplex<T> > conjugate(Alm<xcomplex<T> > &alm) {
 	for(int l=0;l<=alm.Lmax();l++) {
 		for(int m=0;m<=alm.Mmax();m++) {
 			xcomplex<T> *it = alm.mstart(m);
-			it[l].imag() = -alm.mstart(m)[l].imag();
+			it[l].imag(-alm.mstart(m)[l].imag());
 		}
 	}
 	return alm;
@@ -185,7 +185,7 @@ template<typename T> void map2almdil (const Healpix_Map<T> &map,
 #endif
     for (m=0; m<=mmax; ++m)
       {
-	for (int l=m; l<=lmax; ++l) { alm_tmp[l].real() = 0.; alm_tmp[l].imag() = 0.; }
+	for (int l=m; l<=lmax; ++l) { alm_tmp[l].real(0.); alm_tmp[l].imag(0.); }
       for (int ith=0; ith<ulim-llim; ++ith)
         {
         int l;
@@ -338,8 +338,8 @@ void recalc_map2alm (int nph, int mmax, rfft &plan,
     if (m<nph) 
       {
       //shiftarr[m].Set (cos(m*f1),-sin(m*f1));
-      shiftarr[m].real() = cos(m*f1);
-      shiftarr[m].imag() = -sin(m*f1);
+	shiftarr[m].real(cos(m*f1));
+      shiftarr[m].imag(-sin(m*f1));
       }
     else
       shiftarr[m]=-shiftarr[m-nph];
@@ -375,8 +375,8 @@ void recalc_alm2map (int nph, int mmax, rfft &plan,
     if (m<nph)
       {
 	//shiftarr[m].Set (cos(m*f1),sin(m*f1));
-      shiftarr[m].real() = cos(m*f1);
-      shiftarr[m].imag() = sin(m*f1);      
+        shiftarr[m].real(cos(m*f1));
+        shiftarr[m].imag(sin(m*f1));      
       }
     else
       shiftarr[m]=-shiftarr[m-nph];
