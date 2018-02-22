@@ -200,16 +200,16 @@ template<typename T> void map2almdil (const Healpix_Map<T> &map,
                            p2 = phas_n[ith][m]-phas_s[ith][m];
 
           if ((l-m)&1) goto middle;
-start:    alm_tmp[l].real() += p1.real()*Ylm[l]/lambda; alm_tmp[l].imag() += p1.imag()*Ylm[l]/lambda;
+	  start:    alm_tmp[l].real(+p1.real()*Ylm[l]/lambda); alm_tmp[l].imag(+p1.imag()*Ylm[l]/lambda);
           if (++l>lmax) goto end;
-middle:   alm_tmp[l].real() += p2.real()*Ylm[l]/lambda; alm_tmp[l].imag() += p2.imag()*Ylm[l]/lambda;
+	  middle:   alm_tmp[l].real(+p2.real()*Ylm[l]/lambda); alm_tmp[l].imag(+p2.imag()*Ylm[l]/lambda);
           if (++l<=lmax) goto start;
 end:      ;
           }
         }
       xcomplex<T> *palm = alm.mstart(m);
       for (int l=m; l<=lmax; ++l)
-        { palm[l].real() += alm_tmp[l].real(); palm[l].imag() += alm_tmp[l].imag(); }
+        { palm[l].real(+alm_tmp[l].real()); palm[l].imag(+alm_tmp[l].imag()); }
       }
 } // end of parallel region
     }
