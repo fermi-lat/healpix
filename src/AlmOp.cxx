@@ -1,7 +1,7 @@
 /** @file AlmOp.cxx
 @brief Wrapper for the JPL healpix class of spherical harmonics, with the addition of operators required for filtering
 
-@author M. Roth 
+@author M. Roth
 
 $Header: /nfs/slac/g/glast/ground/cvs/healpix/src/AlmOp.cxx,v 1.6 2015/03/27 20:30:43 echarles Exp $
 */
@@ -40,8 +40,8 @@ template<typename T> AlmOp<T> AlmOp<T>::operator*(AlmOp<T> x) {
     for(int l=0;l<=m_alm.Lmax();l++) {
         for(int m=0;m<=m_alm.Mmax();m++) {
             T *it = product.Alms()->mstart(m);
-            it[l].real()=x.Alms()->mstart(m)[l].real()*m_alm.mstart(m)[l].real();
-            it[l].imag()=x.Alms()->mstart(m)[l].imag()*m_alm.mstart(m)[l].imag();
+            it[l].real(x.Alms()->mstart(m)[l].real()*m_alm.mstart(m)[l].real());
+            it[l].imag(x.Alms()->mstart(m)[l].imag()*m_alm.mstart(m)[l].imag());
         }
     }
     return product;
@@ -57,8 +57,8 @@ template<typename T> AlmOp<T> AlmOp<T>::operator+(AlmOp<T> x) {
     for(int l=0;l<=m_alm.Lmax();l++) {
         for(int m=0;m<=m_alm.Mmax();m++) {
             T *it = sum.Alms()->mstart(m);
-            it[l].real()=x.Alms()->mstart(m)[l].real()+m_alm.mstart(m)[l].real();
-            it[l].imag()=x.Alms()->mstart(m)[l].imag()+m_alm.mstart(m)[l].imag();
+            it[l].real(x.Alms()->mstart(m)[l].real()+m_alm.mstart(m)[l].real());
+            it[l].imag(x.Alms()->mstart(m)[l].imag()+m_alm.mstart(m)[l].imag());
         }
     }
     return sum;
@@ -69,12 +69,12 @@ template AlmOp<xcomplex<double> > AlmOp<xcomplex<double> >::operator+(AlmOp<xcom
 
 
 template<typename T> AlmOp<T> AlmOp<T>::conjugate() {
-    AlmOp<T> cj(m_alm.Lmax(),m_alm.Mmax());	
+    AlmOp<T> cj(m_alm.Lmax(),m_alm.Mmax());
     for(int l=0;l<=m_alm.Lmax();l++) {
         for(int m=0;m<=m_alm.Mmax();m++) {
             T *it = cj.Alms()->mstart(m);
-            it[l].real()=m_alm.mstart(m)[l].real();
-            it[l].imag()=-(m_alm.mstart(m)[l].imag());
+            it[l].real(m_alm.mstart(m)[l].real());
+            it[l].imag(-(m_alm.mstart(m)[l].imag()));
         }
     }
     return cj;
