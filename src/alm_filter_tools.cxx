@@ -22,7 +22,7 @@ template<typename T> void mf_constantnoise(Alm<T> &sky,Alm<T> &psf) {
 		a += pmap.tt()[l]*(2*l+1);
 	}
 	psf.Scale(1/a);
-	psf = conjugate(psf);
+	//	psf = conjugate(psf);
 	arr<T> scale(pmap.Lmax()+1,0);
 	for(int l=0;l<=pmap.Lmax();l++) {
 		T fact = sqrt(4*pi/(2*l+1));
@@ -44,7 +44,7 @@ template<typename T> void mf_noise(Alm<T> &sky,Alm<T> &psf, Alm<T> &noise) {
 		a += pmap.tt()[l]/pnoise.tt()[l]*(2*l+1);
 	}
 	psf.Scale(1/a);
-	psf = conjugate(psf);
+	//	psf = conjugate(psf);
 	arr<T> scale(pmap.Lmax()+1,0);
 	for(int l=0;l<=pmap.Lmax();l++) {
 		T fact = sqrt(4*pi/(2*l+1));
@@ -117,7 +117,7 @@ template<typename T> Alm<xcomplex<T> > conjugate(Alm<xcomplex<T> > &alm) {
 	for(int l=0;l<=alm.Lmax();l++) {
 		for(int m=0;m<=alm.Mmax();m++) {
 			xcomplex<T> *it = alm.mstart(m);
-			it[l].imag() = -alm.mstart(m)[l].imag();
+			it[l].imag(-alm.mstart(m)[l].imag());
 		}
 	}
 	return alm;
@@ -167,9 +167,9 @@ template<typename T> void map2almdil (const Healpix_Map<T> &map,
       istart_south = 12*nside*nside - istart_north - nph;
 
       recalc_map2alm (nph, mmax, plan, shiftarr);
-      fft_map2alm (nph, mmax, shifted, weight[ith]*normfact, plan,
-        &map[istart_north], &map[istart_south], phas_n[ith-llim],
-        phas_s[ith-llim], shiftarr, work);
+      //fft_map2alm (nph, mmax, shifted, weight[ith]*normfact, plan,
+      //  &map[istart_north], &map[istart_south], phas_n[ith-llim],
+      //  phas_s[ith-llim], shiftarr, work);
       }
 } // end of parallel region
 #ifdef _OPENMP
@@ -185,7 +185,7 @@ template<typename T> void map2almdil (const Healpix_Map<T> &map,
 #endif
     for (m=0; m<=mmax; ++m)
       {
-	for (int l=m; l<=lmax; ++l) { alm_tmp[l].real() = 0.; alm_tmp[l].imag() = 0.; }
+	for (int l=m; l<=lmax; ++l) { alm_tmp[l].real(0.); alm_tmp[l].imag(0.); }
       for (int ith=0; ith<ulim-llim; ++ith)
         {
         int l;
@@ -200,16 +200,16 @@ template<typename T> void map2almdil (const Healpix_Map<T> &map,
                            p2 = phas_n[ith][m]-phas_s[ith][m];
 
           if ((l-m)&1) goto middle;
-start:    alm_tmp[l].real() += p1.real()*Ylm[l]/lambda; alm_tmp[l].imag() += p1.imag()*Ylm[l]/lambda;
+	  start:    alm_tmp[l].real(+p1.real()*Ylm[l]/lambda); alm_tmp[l].imag(+p1.imag()*Ylm[l]/lambda);
           if (++l>lmax) goto end;
-middle:   alm_tmp[l].real() += p2.real()*Ylm[l]/lambda; alm_tmp[l].imag() += p2.imag()*Ylm[l]/lambda;
+	  middle:   alm_tmp[l].real(+p2.real()*Ylm[l]/lambda); alm_tmp[l].imag(+p2.imag()*Ylm[l]/lambda);
           if (++l<=lmax) goto start;
 end:      ;
           }
         }
       xcomplex<T> *palm = alm.mstart(m);
       for (int l=m; l<=lmax; ++l)
-        { palm[l].real() += alm_tmp[l].real(); palm[l].imag() += alm_tmp[l].imag(); }
+        { palm[l].real(+alm_tmp[l].real()); palm[l].imag(+alm_tmp[l].imag()); }
       }
 } // end of parallel region
     }
@@ -224,7 +224,7 @@ template void map2almdil (const Healpix_Map<double> &map,
 template<typename T> void map2alm_iterdil (const Healpix_Map<T> &map,
   Alm<xcomplex<T> > &alm, int num_iter, const arr<double> &weight, double R)
   {
-  map2almdil(map,alm,weight,R);
+    //  map2almdil(map,alm,weight,R);
   for (int iter=1; iter<=num_iter; ++iter)
     {
     Healpix_Map<T> map2(map.Nside(),map.Scheme(),SET_NSIDE);
@@ -338,8 +338,8 @@ void recalc_map2alm (int nph, int mmax, rfft &plan,
     if (m<nph) 
       {
       //shiftarr[m].Set (cos(m*f1),-sin(m*f1));
-      shiftarr[m].real() = cos(m*f1);
-      shiftarr[m].imag() = -sin(m*f1);
+	shiftarr[m].real(cos(m*f1));
+      shiftarr[m].imag(-sin(m*f1));
       }
     else
       shiftarr[m]=-shiftarr[m-nph];
@@ -375,8 +375,8 @@ void recalc_alm2map (int nph, int mmax, rfft &plan,
     if (m<nph)
       {
 	//shiftarr[m].Set (cos(m*f1),sin(m*f1));
-      shiftarr[m].real() = cos(m*f1);
-      shiftarr[m].imag() = sin(m*f1);      
+        shiftarr[m].real(cos(m*f1));
+        shiftarr[m].imag(sin(m*f1));      
       }
     else
       shiftarr[m]=-shiftarr[m-nph];
