@@ -22,7 +22,7 @@ template<typename T> void mf_constantnoise(Alm<T> &sky,Alm<T> &psf) {
 		a += pmap.tt()[l]*(2*l+1);
 	}
 	psf.Scale(1/a);
-	psf = conjugate(psf);
+	//	psf = conjugate(psf);
 	arr<T> scale(pmap.Lmax()+1,0);
 	for(int l=0;l<=pmap.Lmax();l++) {
 		T fact = sqrt(4*pi/(2*l+1));
@@ -44,7 +44,7 @@ template<typename T> void mf_noise(Alm<T> &sky,Alm<T> &psf, Alm<T> &noise) {
 		a += pmap.tt()[l]/pnoise.tt()[l]*(2*l+1);
 	}
 	psf.Scale(1/a);
-	psf = conjugate(psf);
+	//	psf = conjugate(psf);
 	arr<T> scale(pmap.Lmax()+1,0);
 	for(int l=0;l<=pmap.Lmax();l++) {
 		T fact = sqrt(4*pi/(2*l+1));
@@ -167,9 +167,9 @@ template<typename T> void map2almdil (const Healpix_Map<T> &map,
       istart_south = 12*nside*nside - istart_north - nph;
 
       recalc_map2alm (nph, mmax, plan, shiftarr);
-      fft_map2alm (nph, mmax, shifted, weight[ith]*normfact, plan,
-        &map[istart_north], &map[istart_south], phas_n[ith-llim],
-        phas_s[ith-llim], shiftarr, work);
+      //fft_map2alm (nph, mmax, shifted, weight[ith]*normfact, plan,
+      //  &map[istart_north], &map[istart_south], phas_n[ith-llim],
+      //  phas_s[ith-llim], shiftarr, work);
       }
 } // end of parallel region
 #ifdef _OPENMP
@@ -224,7 +224,7 @@ template void map2almdil (const Healpix_Map<double> &map,
 template<typename T> void map2alm_iterdil (const Healpix_Map<T> &map,
   Alm<xcomplex<T> > &alm, int num_iter, const arr<double> &weight, double R)
   {
-  map2almdil(map,alm,weight,R);
+    //  map2almdil(map,alm,weight,R);
   for (int iter=1; iter<=num_iter; ++iter)
     {
     Healpix_Map<T> map2(map.Nside(),map.Scheme(),SET_NSIDE);
