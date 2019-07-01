@@ -12,6 +12,7 @@ progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
 libEnv.Tool('addLinkDeps', package='healpix', toBuild='shared')
+libEnv.Append(CPPDEFINES = "_GLIBCXX_USE_CXX11_ABI=0")
 
 # EAC: switch to using healpix as an external, so remove healpix/base stuff
 healpixLib = libEnv.SharedLibrary('healpix', 
