@@ -42,11 +42,11 @@ namespace healpix
             @param outputFile Fully qualified fits output file name
             @param tablename Fits secondary extension name
             @param clobber Whether to delete an existing file first */
-            std::auto_ptr<tip::Table> write(const healpix::HealpixArray<CosineBinner> & ha,
+            std::unique_ptr<tip::Table> write(const healpix::HealpixArray<CosineBinner> & ha,
                         const std::string & outputFile,
                         const std::string & tablename, bool clobber=true);
             ///@brief Write a HealpixArray<float> object to a fits file
-            std::auto_ptr<tip::Table> write(const healpix::HealpixArray<float> & ha,
+            std::unique_ptr<tip::Table> write(const healpix::HealpixArray<float> & ha,
                         const std::string & outputFile,
                         const std::string & tablename,
                         const std::string & fieldname, bool clobber=true);
@@ -62,7 +62,7 @@ namespace healpix
             @param tablename Fits secondary extension name
             @param fieldname Vector of field names to be written to table.  
             @param clobber Whether to delete an existing file first */
-            std::auto_ptr<tip::Table> write(const healpix::HealpixArray<std::vector<float> > & ha,
+            std::unique_ptr<tip::Table> write(const healpix::HealpixArray<std::vector<float> > & ha,
                         const std::string & outputFile,
                         const std::string & tablename,
                         const std::vector<std::string> & fieldname,
