@@ -65,7 +65,7 @@ HealpixArrayIO & HealpixArrayIO::instance()
     return s_HealpixArrayIO;
 }
 
-std::auto_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<CosineBinner> & ha,
+std::unique_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<CosineBinner> & ha,
                                                 const std::string & outputFile,
                                                 const std::string & tablename, bool clobber)
 {
@@ -111,10 +111,10 @@ std::auto_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<CosineBinner>
     hdr["PHIBINS"].set(CosineBinner::nphibins());
 
     // need to do this to ensure file is closed when pointer goes out of scope
-    return std::auto_ptr<tip::Table>(&table); 
+    return std::unique_ptr<tip::Table>(&table); 
 }
 
-std::auto_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<float> & ha,
+std::unique_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<float> & ha,
                                                 const std::string & outputFile,
                                                 const std::string & tablename,
                                                 const std::string & fieldname,
@@ -154,11 +154,11 @@ std::auto_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<float> & ha,
     setHealpixHeaderFields(ha, 1, hdr);
 
     // need to do this to ensure file is closed when pointer goes out of scope
-    return std::auto_ptr<tip::Table>(&table); 
+    return std::unique_ptr<tip::Table>(&table); 
 }
 
 
-std::auto_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<std::vector<float> > & ha,
+std::unique_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<std::vector<float> > & ha,
                                                 const std::string & outputFile,
                                                 const std::string & tablename,
                                                 const std::vector<std::string> & fieldname,
@@ -209,7 +209,7 @@ std::auto_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<std::vector<f
     setHealpixHeaderFields(ha, fieldname.size(), hdr);
 
     // need to do this to ensure file is closed when pointer goes out of scope
-    return std::auto_ptr<tip::Table>(&table); 
+    return std::unique_ptr<tip::Table>(&table); 
 }
 
 
