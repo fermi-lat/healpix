@@ -27,3 +27,18 @@ target_link_libraries(
 
 add_executable(test_healpix src/test/test_healpix.cxx)
 target_link_libraries(test_healpix PRIVATE healpix)
+
+###############################################################
+# Installation
+###############################################################
+install(DIRECTORY healpix DESTINATION ${FERMI_INSTALL_INCLUDEDIR})
+install(DIRECTORY data/ DESTINATION ${FERMI_INSTALL_DATADIR})
+
+install(
+  TARGETS healpix
+  # EXPORT fermiTargets
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+  INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+)
