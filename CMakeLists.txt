@@ -19,7 +19,7 @@ target_include_directories(
 
 target_link_libraries(
   healpix
-  PUBLIC PkgConfig::healpix_cxx astro
+  PUBLIC PkgConfig::healpix_cxx astro tip
   PRIVATE OpenMP::OpenMP_CXX
 )
 
