@@ -1,5 +1,5 @@
 add_library(
-  healpix SHARED
+  healpix 
   src/alm_filter_tools.cxx
   src/AlmOp.cxx
   src/CosineBinner.cxx
