@@ -25,6 +25,8 @@ target_link_libraries(
 
 # target_compile_definitions(healpix PRIVATE _OPENMP)
 
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 add_executable(test_healpix src/test/test_healpix.cxx)
 target_link_libraries(test_healpix PRIVATE healpix)
 
