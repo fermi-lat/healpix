@@ -15,6 +15,7 @@
 
 ///< NASA healpix class
 /* Standard Includes */
+#include <iterator>
 #include <numeric> // for accumulate
 #include <stdexcept>
 
