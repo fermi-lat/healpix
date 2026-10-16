@@ -38,7 +38,7 @@ void HealpixMap::load(std::string filename)
 
 
 
-double HealpixMap::operator ()(const astro::SkyDir& dir)const
+auto HealpixMap::operator ()(const astro::SkyDir& dir)const -> double
 {
     HealPixel hp(dir, m_level);
     const_iterator it (find(hp.index()) );

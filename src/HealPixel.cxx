@@ -75,7 +75,7 @@ HealPixel::operator astro::SkyDir()const
     return astro::SkyDir( phi*180/M_PI, (M_PI/2-theta)*180/M_PI, s_coordsys );
 }
 
-long HealPixel::lastChildIndex(int childLevel) const
+auto HealPixel::lastChildIndex(int childLevel) const -> long
 {
     int leveldiff = childLevel - level();
 
@@ -86,7 +86,7 @@ long HealPixel::lastChildIndex(int childLevel) const
 }
 
 
-bool HealPixel::operator<(const HealPixel& other)const
+auto HealPixel::operator<(const HealPixel& other)const -> bool
 {
     int leveldiff = data()-other.data();
     if( leveldiff==0 ) return index() < other.index();
@@ -99,22 +99,22 @@ bool HealPixel::operator<(const HealPixel& other)const
     }
 }
 
-bool HealPixel::operator==(const HealPixel& other)const
+auto HealPixel::operator==(const HealPixel& other)const -> bool
 {
     return data() == other.data() && index() == other.index();
 }
 
-bool HealPixel::operator!=(const HealPixel& other)const
+auto HealPixel::operator!=(const HealPixel& other)const -> bool
 {
     return data() != other.data() || index() != other.index();
 }
 
-bool HealPixel::operator<=(const HealPixel& other)const
+auto HealPixel::operator<=(const HealPixel& other)const -> bool
 {
     return *this < other || *this == other;
 }
 
-std::vector<HealPixel> HealPixel::neighbors() const
+auto HealPixel::neighbors() const -> std::vector<HealPixel>
 {
     std::vector<HealPixel> p;
     Healpix hp( nside(), healpix::Healpix::NESTED, s_coordsys);
@@ -133,7 +133,7 @@ void HealPixel::setCoordinateSystem(astro::SkyDir::CoordSystem sys)
     s_coordsys=sys;
 }
 
-bool HealPixel::test()
+auto HealPixel::test() -> bool
 { 
 #if 0 // not relevant now
     bool check1 = HealPixel(3,3) < HealPixel(1,2);

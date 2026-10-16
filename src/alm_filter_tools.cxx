@@ -113,7 +113,7 @@ template void saf_noise(Alm<xcomplex<float> > &sky,Alm<xcomplex<float> > &psf, A
 template void saf_noise(Alm<xcomplex<double> > &sky,Alm<xcomplex<double> > &psf, Alm<xcomplex<double> > &noise);
 
 
-template<typename T> Alm<xcomplex<T> > conjugate(Alm<xcomplex<T> > &alm) {
+template<typename T> auto conjugate(Alm<xcomplex<T> > &alm) -> Alm<xcomplex<T> > {
 	for(int l=0;l<=alm.Lmax();l++) {
 		for(int m=0;m<=alm.Mmax();m++) {
 			xcomplex<T> *it = alm.mstart(m);
@@ -242,7 +242,7 @@ template void map2alm_iterdil (const Healpix_Map<double> &map,
   Alm<xcomplex<double> > &alm, int num_iter,
   const arr<double> &weight, double R);
 
-template<typename T> Healpix_Map<T> lhood(int level) {
+template<typename T> auto lhood(int level) -> Healpix_Map<T> {
 	Healpix_Map<T> hm(level,::RING);
 	arr<T> map(hm.Npix());
 	double gamma = 2.5;

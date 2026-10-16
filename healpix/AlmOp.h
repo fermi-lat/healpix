@@ -44,19 +44,19 @@ namespace healpix {
 
         /**@brief returns a reference to the embedded spherical harmonics class (for normal function calls)
         */
-        Alm<T>* Alms();
+        auto Alms() -> Alm<T>*;
 
         /**@brief multiplies the corresponding elements of two equal-dimensioned Spherical Harmonic objects
         */
-        AlmOp<T> operator*(AlmOp<T> x);
+        auto operator*(AlmOp<T> x) -> AlmOp<T>;
 
         /**@brief adds the corresponding elements of two equal-dimensioned Spherical Harmonic objects
         */
-        AlmOp<T> operator+(AlmOp<T> x);
+        auto operator+(AlmOp<T> x) -> AlmOp<T>;
 
         /**@brief returns the conjugate of a spherical harmonic object
         */
-        AlmOp<T> conjugate();
+        auto conjugate() -> AlmOp<T>;
 
     private:
         Alm<T> m_alm; //HEALpix library spherical harmonic object

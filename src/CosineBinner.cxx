@@ -22,23 +22,23 @@ size_t CosineBinner::s_nbins=40;  /// the number of bins for each cosine range
 bool   CosineBinner::s_sqrt_weight=true;
 size_t CosineBinner::s_phibins=0;
 
-size_t CosineBinner::nphibins(){return s_phibins;}
+auto CosineBinner::nphibins() -> size_t{return s_phibins;}
 void   CosineBinner::setPhiBins(size_t n){s_phibins=n;}
-double CosineBinner::cosmin() { return s_cosmin;}
-size_t CosineBinner::nbins() {return s_nbins;}
+auto CosineBinner::cosmin() -> double { return s_cosmin;}
+auto CosineBinner::nbins() -> size_t {return s_nbins;}
 
-size_t CosineBinner::cosine_index(double costheta)
+auto CosineBinner::cosine_index(double costheta) -> size_t
 {
     double f ( (1.-costheta)/(1-s_cosmin) );
     if(s_sqrt_weight) f=sqrt(f);
     return static_cast<size_t>(f*s_nbins);
 }
-double CosineBinner::folded_phi(double phi)
+auto CosineBinner::folded_phi(double phi) -> double
 {
     if( phi<0) phi+= 2*M_PI;
     return  1.- fabs(pi4-fmod(phi, pi2) )/pi4 ;
 }
-size_t CosineBinner::phi_index(double phi)
+auto CosineBinner::phi_index(double phi) -> size_t
 {
     return static_cast<size_t>(folded_phi(phi)*s_phibins);
 }
@@ -56,7 +56,7 @@ void CosineBinner::fill(double costheta, double value)
     (*this)[costheta] += value;
 }
 /// the binning function: add value to the selected bin
-size_t CosineBinner::fill(double costheta, double phi, double value)
+auto CosineBinner::fill(double costheta, double phi, double value) -> size_t
 {
     if( costheta<=s_cosmin ) return std::string::npos;
     size_t ci ( cosine_index(costheta) );
@@ -70,7 +70,7 @@ size_t CosineBinner::fill(double costheta, double phi, double value)
     return pi;
 }
 
-float& CosineBinner::operator[](double costheta)
+auto CosineBinner::operator[](double costheta) -> float&
 {
     double f = (1.-costheta)/(1-s_cosmin);
     if(s_sqrt_weight) f=sqrt(f);
@@ -81,7 +81,7 @@ float& CosineBinner::operator[](double costheta)
     return at(i);
 }
 
-const float& CosineBinner::operator[](double costheta)const
+auto CosineBinner::operator[](double costheta)const -> const float&
 {
     double f = (1.-costheta)/(1-s_cosmin);
     if(s_sqrt_weight) f=sqrt(f);
@@ -89,7 +89,7 @@ const float& CosineBinner::operator[](double costheta)const
 }
 
 
-const float& CosineBinner::operator()(double costheta, double phi)const
+auto CosineBinner::operator()(double costheta, double phi)const -> const float&
 {
     double f = (1.-costheta)/(1-s_cosmin);
     if(s_sqrt_weight) f=sqrt(f);
@@ -100,7 +100,7 @@ const float& CosineBinner::operator()(double costheta, double phi)const
 }
 
 /// cos(theta) for the iterator
-double CosineBinner::costheta(std::vector<float>::const_iterator i)const
+auto CosineBinner::costheta(std::vector<float>::const_iterator i)const -> double
 {
     int bin = (i-begin()) % nbins();
     double f = (bin+0.5)/s_nbins;
@@ -109,7 +109,7 @@ double CosineBinner::costheta(std::vector<float>::const_iterator i)const
 }
 
 /// phi for the iterator: note only 0-pi/4 (0-45 degrees)
-double CosineBinner::phi(std::vector<float>::const_iterator i) const
+auto CosineBinner::phi(std::vector<float>::const_iterator i) const -> double
 {
     if( nphibins() ==0){
         throw std::runtime_error("CosineBinner::phi: request for phi value, but phi not set up");
@@ -122,7 +122,7 @@ double CosineBinner::phi(std::vector<float>::const_iterator i) const
 }
 
 
-std::string CosineBinner::thetaBinning(){ 
+auto CosineBinner::thetaBinning() -> std::string{ 
     if( s_sqrt_weight) {
         return "SQRT(1-COSTHETA)";
     }else{

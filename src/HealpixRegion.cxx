@@ -17,9 +17,9 @@ $Header: /nfs/slac/g/glast/ground/cvs/healpix/src/HealpixRegion.cxx,v 1.2 2016/0
 
 namespace healpix {
   
-  int HealpixRegion::parseString(const std::string& st,
+  auto HealpixRegion::parseString(const std::string& st,
 				RegionType& regionType, 
-				std::vector<float>& pars) {
+				std::vector<float>& pars) -> int {
     const std::string delims(",()");
     std::vector<std::string> tokens;
     facilities::Util::stringTokenize(st,delims,tokens);
@@ -52,9 +52,9 @@ namespace healpix {
     return 0;
   }
   
-  int HealpixRegion::buildString(RegionType regionType, 
+  auto HealpixRegion::buildString(RegionType regionType, 
 				const std::vector<float>& pars,
-				std::string& st) {
+				std::string& st) -> int {
     st.clear();
     char buf[255];
     switch (regionType) {

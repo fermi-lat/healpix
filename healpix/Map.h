@@ -51,7 +51,7 @@ namespace healpix {
 
         /**@brief returns a reference to the Healpix map
         */
-        Healpix_Map< T>* map();
+        auto map() -> Healpix_Map< T>*;
 
         /**@brief returns a constant reference to the Healpix map (time-intensive)
         */
@@ -59,7 +59,7 @@ namespace healpix {
 
         /**@brief returns an array where a[i] is the ith moment of the angular power spectrum up to lmax
         */
-        std::vector<T> powspec(int lmax);
+        auto powspec(int lmax) -> std::vector<T>;
 
         /**@brief scales every element in the map by factor
         */
@@ -71,7 +71,7 @@ namespace healpix {
 
         /**@brief addition operator: map will have nside = max(this.nside,other.nside), ie the higher resolution
         */
-        Map<T> operator+(Map<T> &other);
+        auto operator+(Map<T> &other) -> Map<T>;
 
         /**@brief applies a matched filter . The filter kernel is derived from a 
         fits file "LHOOD.fits"

@@ -11,7 +11,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/healpix/src/HealpixArra
 
 #include <cstdio>
 #include <cmath>
-#include <errno.h>
+#include <cerrno>
 #include <sstream>
 #include <string>
 #include <typeinfo>
@@ -34,7 +34,7 @@ namespace {
         hdr["LASTPIX"].set(ha.size()-1); 
         hdr["NAXIS1"].set( columns* sizeof(float) );
     }
-    std::string coordsystem(const tip::Header& hdr){
+    auto coordsystem(const tip::Header& hdr) -> std::string{
         std::string value;
         try{ // new value
             hdr["COORDSYS"].get(value);
@@ -49,7 +49,7 @@ namespace {
 }// anon namespace
 
 // Get the instance of the singleton class.
-HealpixArrayIO & HealpixArrayIO::instance()
+auto HealpixArrayIO::instance() -> HealpixArrayIO &
 {
     static bool first_time = true;
 
@@ -65,9 +65,9 @@ HealpixArrayIO & HealpixArrayIO::instance()
     return s_HealpixArrayIO;
 }
 
-std::unique_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<CosineBinner> & ha,
+auto HealpixArrayIO::write(const HealpixArray<CosineBinner> & ha,
                                                 const std::string & outputFile,
-                                                const std::string & tablename, bool clobber)
+                                                const std::string & tablename, bool clobber) -> std::unique_ptr<tip::Table>
 {
     if (clobber)
     {
@@ -114,11 +114,11 @@ std::unique_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<CosineBinne
     return std::unique_ptr<tip::Table>(&table); 
 }
 
-std::unique_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<float> & ha,
+auto HealpixArrayIO::write(const HealpixArray<float> & ha,
                                                 const std::string & outputFile,
                                                 const std::string & tablename,
                                                 const std::string & fieldname,
-                                                bool clobber)
+                                                bool clobber) -> std::unique_ptr<tip::Table>
 {
     if (clobber)
     {
@@ -158,11 +158,11 @@ std::unique_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<float> & ha
 }
 
 
-std::unique_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<std::vector<float> > & ha,
+auto HealpixArrayIO::write(const HealpixArray<std::vector<float> > & ha,
                                                 const std::string & outputFile,
                                                 const std::string & tablename,
                                                 const std::vector<std::string> & fieldname,
-                                                bool clobber)
+                                                bool clobber) -> std::unique_ptr<tip::Table>
 {
     if (clobber)
     {
@@ -214,8 +214,8 @@ std::unique_ptr<tip::Table> HealpixArrayIO::write(const HealpixArray<std::vector
 
 
 
-HealpixArray<CosineBinner> HealpixArrayIO::read(const std::string & inputFile,
-                                                const std::string & tablename)
+auto HealpixArrayIO::read(const std::string & inputFile,
+                                                const std::string & tablename) -> HealpixArray<CosineBinner>
 {
     /* If the caller passes a reference to a HealpixArray instead of having this routine
     return a HealpixArray, how does the caller know what to set for nside, s_nbins, etc.?
@@ -268,9 +268,9 @@ HealpixArray<CosineBinner> HealpixArrayIO::read(const std::string & inputFile,
     return ha;
 }
 
-HealpixArray<float> HealpixArrayIO::read(const std::string & inputFile,
+auto HealpixArrayIO::read(const std::string & inputFile,
                                          const std::string & tablename,
-                                         const std::string & fieldname)
+                                         const std::string & fieldname) -> HealpixArray<float>
 {
     /* If the caller passes a reference to a HealpixArray instead of having this routine
     return a HealpixArray, how does the caller know what to set for nside, s_nbins, etc.?
@@ -305,9 +305,9 @@ HealpixArray<float> HealpixArrayIO::read(const std::string & inputFile,
     return ha;
 }
 
-HealpixArray<std::vector<float> > HealpixArrayIO::read(const std::string & inputFile,
+auto HealpixArrayIO::read(const std::string & inputFile,
                                                        const std::string & tablename,
-                                                       const std::vector<std::string> & fieldname)
+                                                       const std::vector<std::string> & fieldname) -> HealpixArray<std::vector<float> >
 {      
     const tip::Table & table=*tip::IFileSvc::instance().readTable(inputFile, tablename);
     const tip::Header& hdr = table.getHeader();

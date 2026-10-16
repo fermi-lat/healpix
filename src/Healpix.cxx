@@ -21,8 +21,8 @@
 
 // anonymous namespace for helper functions
 namespace {
-    inline double radians(double x){return x*M_PI/180.;}
-    inline double degrees(double x){return x*180./M_PI;}
+    inline auto radians(double x) -> double{return x*M_PI/180.;}
+    inline auto degrees(double x) -> double{return x*180./M_PI;}
 }
 
 using namespace healpix;
@@ -99,7 +99,7 @@ void Healpix::Pixel::neighbors(std::vector<Healpix::Pixel> & p) const
     }   
 }
 
-double Healpix::integrate(const astro::SkyFunction& f)const
+auto Healpix::integrate(const astro::SkyFunction& f)const -> double
 {
     return std::accumulate(begin(), end(), 0., Integrand(f));
 }
@@ -134,16 +134,16 @@ void Healpix::findNeighbors(int index, std::vector<int> &p) const
 }
 
  ///@brief the number of sides 
-long Healpix::nside()const{return m_nside; }
+auto Healpix::nside()const -> long{return m_nside; }
     ///@brief the number of pixels
-long Healpix::npix()const{return 12*nside()*nside();}
+auto Healpix::npix()const -> long{return 12*nside()*nside();}
 
     ///@brief the number of pixels, as the size.
-size_t Healpix::size()const{return npix();}
+auto Healpix::size()const -> size_t{return npix();}
 
-Healpix::Ordering Healpix::ord()const{return m_ord;}
+auto Healpix::ord()const -> Healpix::Ordering{return m_ord;}
 
-bool Healpix::nested()const{return ord()==NESTED;}
+auto Healpix::nested()const -> bool{return ord()==NESTED;}
 
 void Healpix::query_disc (const astro::SkyDir dir, double radius, std::vector<int> & v) const
 {

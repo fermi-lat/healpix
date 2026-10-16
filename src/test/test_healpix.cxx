@@ -30,7 +30,7 @@ namespace {
     class Funct{
     public:
         Funct(int power=0): p(power){}
-        double operator()(double z )const{return p==0?1.: std::pow(1.-z,p);}
+        auto operator()(double z )const -> double{return p==0?1.: std::pow(1.-z,p);}
     int p;
     };
 
@@ -38,12 +38,12 @@ namespace {
     class PhiFunct{
     public:
         PhiFunct(int power=0): p(power){}
-        double integral(double z, double phi )const{return p==0?1.: std::pow(1.-z,p);}
+        auto integral(double z, double phi )const -> double{return p==0?1.: std::pow(1.-z,p);}
     int p;
     };
 }
 
-int main() {
+auto main() -> int {
 
     int rc = 0;
     try {
