@@ -245,6 +245,11 @@ to the legacy SCons build. `swig_setup.in` refers to a nonexistent
 `healpix/HealPixMap.h`. `CosineBinner` is visible from Python only through
 `pyLikelihood`.
 
+### Environment variables
+
+None (no `getenv`). Variables set by conda activation are described under
+"Runtime environment" in ScienceTools' `docs/architecture/README.md`.
+
 ### File formats
 
 `HealpixArrayIO` writes a binary table extension named by the caller. It
@@ -286,6 +291,10 @@ map through healpix_cxx (`PLANCK_FLOAT64`).
     `TestHealpixArray`. So the test only checks `CosineBinner` binning,
     φ folding and integrals, needs no environment variables or data, and
     writes no files.
+  - The default run of the project harness `recipe/tests/ST-unit-test`
+    (see "Testing" in ScienceTools' `docs/architecture/README.md`) runs
+    `test_healpix` and checks only its exit status. No output is compared
+    and no healpix reference data exists anywhere.
   - **`Healpix`, `HealpixArray`, `HealpixArrayIO`, `HealpixRegion` and
     `Map` have no active tests here.** Their real coverage is indirect,
     through `map_tools`, `Likelihood` (livetime cubes) and `evtbin`
