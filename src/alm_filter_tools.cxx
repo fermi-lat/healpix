@@ -3,9 +3,9 @@
 #include "powspec.h"
 #include "alm_powspec_tools.h"
 #include "healpix_map.h"
-//#include "fftpack_support.h"
+#include "fftpack_support.h"
 //#include "ylmgen.h"
-//#include "openmp_support.h"
+#include "openmp_support.h"
 
 // FIXME -- this file is broken
 
