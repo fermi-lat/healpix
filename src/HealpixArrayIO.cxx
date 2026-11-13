@@ -92,7 +92,7 @@ auto HealpixArrayIO::write(const HealpixArray<CosineBinner> & ha,
 
     // get iterators for the Table and the HealpixArray
     tip::Table::Iterator itor = table.begin();
-    HealpixArray<healpix::CosineBinner>::const_iterator haitor = ha.begin();
+    auto haitor = ha.begin();
 
     // now just copy
     for( ; haitor != ha.end(); ++haitor, ++itor)
@@ -138,7 +138,7 @@ auto HealpixArrayIO::write(const HealpixArray<float> & ha,
 
     // get iterators for the Table and the HealpixArray
     tip::Table::Iterator itor = table.begin();
-    HealpixArray<float>::const_iterator haitor = ha.begin();
+    auto haitor = ha.begin();
 
     // now just copy
     for( ; haitor != ha.end(); ++haitor, ++itor)
@@ -178,7 +178,7 @@ auto HealpixArrayIO::write(const HealpixArray<std::vector<float> > & ha,
     // this is a work-around for a bug in tip v2r1p1
 
     // Add all field names
-    for (std::vector<std::string>::const_iterator sit = fieldname.begin();
+    for (auto sit = fieldname.begin();
         sit != fieldname.end(); ++ sit)
     {
         table.appendField(*sit, "1E");
@@ -187,14 +187,14 @@ auto HealpixArrayIO::write(const HealpixArray<std::vector<float> > & ha,
 
     // get iterators for the Table and the HealpixArray
     tip::Table::Iterator itor = table.begin();
-    HealpixArray<std::vector<float> >::const_iterator haitor = ha.begin();
+    auto haitor = ha.begin();
 
     // now just copy
     for( ; haitor != ha.end(); ++haitor, ++itor)
     {
 
-        std::vector<float>::const_iterator flit = (*haitor).begin();
-        for (std::vector<std::string>::const_iterator sit = fieldname.begin();
+        auto flit = (*haitor).begin();
+        for (auto sit = fieldname.begin();
             sit != fieldname.end(); ++ sit, ++flit)
         {
             if (flit == (*haitor).end())
@@ -258,7 +258,7 @@ auto HealpixArrayIO::read(const std::string & inputFile,
     HealpixArray<healpix::CosineBinner> ha(Healpix(nside, ord, coordsys));
 
     tip::Table::ConstIterator itor = table.begin();
-    HealpixArray<CosineBinner>::iterator haitor = ha.begin();
+    auto haitor = ha.begin();
 
     for( ; itor != table.end(); ++haitor, ++itor)
     {
@@ -295,7 +295,7 @@ auto HealpixArrayIO::read(const std::string & inputFile,
     HealpixArray<float> ha(Healpix(nside, ord, coordsys));
 
     tip::Table::ConstIterator itor = table.begin();
-    HealpixArray<float>::iterator haitor = ha.begin();
+    auto haitor = ha.begin();
 
     for( ; itor != table.end(); ++haitor, ++itor)
     {
@@ -326,12 +326,12 @@ auto HealpixArrayIO::read(const std::string & inputFile,
     HealpixArray<std::vector<float> > ha(Healpix(nside, ord, coordsys));
 
     tip::Table::ConstIterator itor = table.begin();
-    HealpixArray<std::vector<float> >::iterator haitor = ha.begin();
+    auto haitor = ha.begin();
 
     for( ; itor != table.end(); ++haitor, ++itor)
     {
         (*haitor).clear();
-        for (std::vector<std::string>::const_iterator sit = fieldname.begin();
+        for (auto sit = fieldname.begin();
             sit != fieldname.end(); ++sit)
         {
             float work;

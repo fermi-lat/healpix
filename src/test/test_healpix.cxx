@@ -38,7 +38,7 @@ namespace {
     class PhiFunct{
     public:
         PhiFunct(int power=0): p(power){}
-        auto integral(double z, double phi )const -> double{return p==0?1.: std::pow(1.-z,p);}
+        [[nodiscard]] auto integral(double z, double phi )const -> double{return p==0?1.: std::pow(1.-z,p);}
     int p;
     };
 }

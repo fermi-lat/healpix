@@ -122,7 +122,7 @@ auto CosineBinner::phi(std::vector<float>::const_iterator i) const -> double
 }
 
 
-auto CosineBinner::thetaBinning() -> std::string{ 
+auto CosineBinner::thetaBinning() -> std::string { 
     if( s_sqrt_weight) {
         return "SQRT(1-COSTHETA)";
     }else{

@@ -13,13 +13,13 @@ HealpixMap::HealpixMap(int level)
 {}
 
 HealpixMap::~HealpixMap()
-{}
+= default;
 
 void HealpixMap::save(std::string filename)
 {
     std::ofstream out(filename.c_str());
     out << m_level << std::endl;
-    for( const_iterator it = begin(); it!= end(); ++it){
+    for( auto it = begin(); it!= end(); ++it){
         out << it->first << "\t" << it->second << std::endl;
     }
 }
@@ -41,7 +41,7 @@ void HealpixMap::load(std::string filename)
 auto HealpixMap::operator ()(const astro::SkyDir& dir)const -> double
 {
     HealPixel hp(dir, m_level);
-    const_iterator it (find(hp.index()) );
+    auto it (find(hp.index()) );
     return it != end() ? it->second : 0;   
 }
 

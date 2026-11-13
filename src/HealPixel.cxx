@@ -120,7 +120,7 @@ auto HealPixel::neighbors() const -> std::vector<HealPixel>
     Healpix hp( nside(), healpix::Healpix::NESTED, s_coordsys);
     std::vector<int> neighbors;
     hp.findNeighbors(index(), neighbors);
-    for (std::vector<int>::const_iterator i = neighbors.begin();
+    for (auto i = neighbors.begin();
         i !=neighbors.end(); ++i)
     {
         p.push_back( HealPixel(*i, level(), band()));
