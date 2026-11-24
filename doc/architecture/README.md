@@ -172,7 +172,9 @@ gtltcube (Likelihood/makeExposureCube)
   CosineBinner::setBinning(cosmin=0, nbins=1/dcostheta, sqrt=true)   // static, before any cell exists
   CosineBinner::setPhiBins(phibins)                                  // optional
   LikeExposure (map_tools::Exposure = HealpixArray<CosineBinner>, NESTED, EQUATORIAL)
-    for each FT2 interval, for each pixel: CosineBinner::fill(costh[, phi], livetime)
+    for each block of FT2 intervals (map_tools::Exposure::fill_block):
+      for each pixel (split across OpenMP threads), for each interval in order:
+        CosineBinner::fill(costh[, phi], livetime)
   LikeExposure::writeFile → its own tip code (EXPOSURE + WEIGHTED_EXPOSURE + CTHETABOUNDS)
 
 gtexpcube2 / gtsrcmaps / pyLikelihood
@@ -394,6 +396,21 @@ map through healpix_cxx (`PLANCK_FLOAT64`).
   φ-bin region when φ binning is on, so it silently returns a φ bin.
   Otherwise `at()` throws `std::out_of_range`. `fill` silently drops
   `cos θ ≤ cosmin`.
+- `fill(costh, phi, v)` clamps the cos θ index but **not the φ index**.
+  `folded_phi(phi)` is exactly 1 when `fmod(phi, π/2)` is exactly π/4
+  (for example a pixel whose instrument-frame x and y components are
+  equal), so `phi_index` returns `nphibins` and the bin index
+  `(nphibins+1)*nbins + ci` is one past the end of the cell: `at()` throws
+  `std::out_of_range` and `gtltcube` with `phibins > 0` aborts. Rare but
+  reachable (from reading the code; not checked at runtime). Clamping
+  `phi_index` to `nphibins-1`, as `ci` is clamped, would change no output
+  the current code produces. healpix-19.
+- **Threads:** `fill` and the index functions only read the static
+  binning, so different cells can be filled from different threads at
+  once (map_tools' threaded `Exposure` fill relies on this, one thread
+  per cell). `setBinning`, `setPhiBins` and `HealpixArrayIO::read` change
+  the statics and must not run while another thread fills or reads
+  cells.
 - `HealpixMap::load` reads until EOF with `while(!in.eof())`. A trailing
   newline can repeat the last entry (it is harmless, because it is
   assigned to the same key).
